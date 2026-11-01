@@ -5,6 +5,27 @@ different "combine" step: *ask the left subtree, ask the right subtree, combine
 the answers at this node.* Once you see trees that way, the remaining work
 is choosing **what to return** and **what to pass down**.
 
+## Explain it like I'm a kid
+
+A tree is a family tree: one person at the top, each with children below. In a binary tree, each person has at most two children. A person with no children is called a leaf.
+
+There are different ways to visit everyone:
+
+- **Pre-order:** say hello to the parent first, then the left side, then the right side.
+- **In-order:** the left side first, then the parent, then the right side.
+- **Post-order:** both children first, then the parent.
+- **Level order:** visit floor by floor, like reading a page from top to bottom.
+
+Trees are solved by asking family members for help:
+
+- **Bottom-up:** every parent asks their children for an answer, then passes one up. "How tall is your side?" gives you the height. Some puzzles also keep a separate best-so-far score along the way, like the widest path across the tree (the diameter).
+- **Top-down:** parents pass rules down to their children, like "everyone below me must be smaller than 10". This is how you check if a search tree is valid.
+- **Binary search tree (BST):** smaller values go left and bigger values go right, like a guessing game built into the tree. An in-order visit reads the values in sorted order.
+- **Lowest common ancestor:** the closest relative that two people share.
+- **Serializing and rebuilding:** write a tree down as a list, like flat-pack furniture instructions, so someone can build the same tree later.
+
+**Remember:** trust your children to solve their own smaller trees. You only combine their answers.
+
 ## What you'll learn
 
 - `TreeNode`, plus `FromLevelOrder` / `ToLevelOrder` helpers that use the familiar

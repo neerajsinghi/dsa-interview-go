@@ -1,5 +1,23 @@
 # 20 · Design Problems (OOD / coding-design rounds)
 
+## Explain it like I'm a kid
+
+These puzzles ask you to build a small machine with buttons, like a toy with rules: "pressing this button must always be fast". You choose which parts to combine.
+
+Start by deciding what the buttons do. Then pick the parts, and make sure every button leaves the machine tidy.
+
+- **LRU cache:** your desk only fits 3 books. Each time you use a book, move it to the front. When you need room, remove the one at the back, because you haven't used it for the longest time. A notebook (hash map) finds any book at once, and a chain (linked list) keeps them in order.
+- **LFU cache:** the same desk, but you remove the book you've used the *fewest* times. If there's a tie, remove the one you haven't touched for the longest.
+- **Min or max stack:** on each plate in a pile, put a sticky note saying the smallest number in the pile so far. The answer is always on top.
+- **Hit counter:** a clock with one box per second, used to count visits in the last few minutes. As time moves on, old boxes get reused.
+- **Time map and snapshot array:** a diary of how something changed. To answer "what was it on Tuesday?", search the dates for the closest one on or before Tuesday.
+- **Iterator:** a bookmark that remembers your place, so you can stop and carry on later.
+- **Rate limiter (token bucket):** a jar of tokens that slowly refills. Each visit uses a token. When the jar is empty, you wait.
+- **Simple Twitter feed:** everyone's posts are sorted piles, newest on top. To build your feed, keep taking the newest top post using a heap.
+- **Working safely together:** when many kids want to write on one whiteboard, they take turns holding the marker. That marker is called a lock.
+
+**Remember:** there are only a few parts, like LEGO bricks. The skill is knowing which ones to snap together.
+
 ## What you'll learn
 
 - How to turn a spec ("O(1) get and put, evict least recently used") into a **type with methods and invariants**.

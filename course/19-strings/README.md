@@ -1,5 +1,29 @@
 # 19 · Strings
 
+## Explain it like I'm a kid
+
+A string is a row of letters. These tricks help you find words and patterns very quickly, without starting over each time you make a mistake.
+
+**Finding a word in a long story:**
+
+- **KMP (prefix function):** you're looking for "ababc" and you've matched "abab" when the next letter is wrong. You don't have to go back, because the "ab" you just read could be the start of a new match. KMP makes a little cheat sheet in advance, so you know where to continue.
+- **Z-function:** for each spot in the story, count how many letters match the start of your word. If the count equals the length of your word, you've found it.
+- **Rabin-Karp (rolling hash):** give each chunk of letters a number, like a fingerprint. When you slide over by one letter, you can update the number quickly. Two different chunks can rarely get the same number, so double-check a match.
+
+**Finding palindromes (words that read the same both ways):**
+
+- **Two pointers:** compare letters from both ends and walk inward.
+- **Expand around the centre:** stand in the middle and step outward while both sides match. In "racecar", start at the "e".
+- **Manacher:** a palindrome is like a mirror, so the right side can reuse what you've already learned on the left. First it puts a `#` between the letters, so that every palindrome has one clear middle.
+
+**Handling text with care:**
+
+- **Reading numbers (atoi):** read "123" one character at a time, and watch for numbers too big to fit.
+- **Rewriting in place:** one friend reads while another writes on the same paper, as in "aaabb" becoming "a3b2".
+- **`byte` or `rune`:** some characters, like emoji, take up more than one byte, so be careful when counting them.
+
+**Remember:** don't throw away what you've already read. It can tell you where to look next.
+
 ## What you'll learn
 
 - How Go represents strings (immutable bytes, UTF-8) and when to use `byte`, `rune`, `[]byte` or `strings.Builder`.

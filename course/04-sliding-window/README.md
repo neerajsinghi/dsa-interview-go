@@ -4,6 +4,21 @@
 > contiguous subarray, and you update its state in O(1) as the edges move
 > instead of recomputing every window.
 
+## Explain it like I'm a kid
+
+Imagine looking at a long train through a window. You don't look at the whole train. You slide along and watch only the carriages in your window.
+
+When the window moves, one carriage leaves and one enters. You update your count instead of counting everything again.
+
+- **Fixed window:** the window always shows 3 carriages. "Which 3 carriages in a row have the most people?"
+- **Stretchy window:** the right edge moves forward to grow it, and the left edge moves forward to shrink it when a rule breaks. "What's the longest stretch of letters with no repeats?"
+- **Window state:** the little notepad that keeps track of what's inside, such as a total or a count of each letter.
+- **Monotonic deque:** you want to know the tallest kid in the window at all times. When a tall kid joins the line, any shorter kids in front of them can leave, because they can never be the tallest again.
+
+There's one catch. A stretchy window needs a rule that behaves predictably, such as "adding more always makes the total bigger". If negative numbers can shrink the total, use prefix sums from the next lesson.
+
+**Remember:** don't count everything again. Just add what came in and remove what went out.
+
 ## What you'll learn
 
 - **Fixed-size** windows (size k) and **variable-size** windows (grow/shrink on a condition).

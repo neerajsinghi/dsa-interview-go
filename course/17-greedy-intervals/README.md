@@ -1,5 +1,25 @@
 # 17 · Greedy & Intervals
 
+## Explain it like I'm a kid
+
+**Greedy** means taking what looks best right now and never looking back. It's like picking the biggest slice of cake first.
+
+It doesn't always work. If you have coins worth 1, 3 and 4 and need to make 6, greedy takes 4 + 1 + 1, which is three coins. But 3 + 3 is only two. So you need a reason to trust it.
+
+- **Exchange argument:** that reason. Take any perfect answer and swap one of its choices for the greedy choice. If it's still just as good, the greedy choice is safe.
+- **Kadane's algorithm (running best):** you walk down a path collecting and losing points. If your score drops below zero, it can only hold you back, so start fresh from the next step.
+- **Jump games (farthest reach):** on stepping stones, keep track of the farthest stone you could reach so far.
+- **Gas station (restart):** if you run out of fuel on a loop, none of the stations you've passed could have worked as a starting point. Try starting from the next one.
+
+**Intervals** are things with a start and an end, like playdates on a calendar:
+
+- **Merging:** sort by start time. If a playdate starts before the last one ends, join them into one.
+- **Fitting in the most:** sort by end time and always pick the one that finishes first. That leaves the most time for the others.
+- **Counting rooms (sweep line):** walk through the day, adding 1 when a meeting starts and subtracting 1 when one ends. The highest number is how many rooms you need.
+- **Partitioning letters:** treat each letter as an interval from its first to its last appearance, then merge them.
+
+**Remember:** greedy is fast but tricky. Before you use it, make sure you can say why it's safe.
+
 ## What you'll learn
 
 - When a **locally best choice** is also globally optimal — and how to *prove* it with an exchange argument instead of hoping.
