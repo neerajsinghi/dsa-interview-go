@@ -4,6 +4,24 @@
 > subtraction. Pair it with a hash map and you can count subarrays with a given
 > sum in O(n) — even with negative numbers, where sliding windows fail.
 
+## Explain it like I'm a kid
+
+Imagine keeping a running total of your savings:
+
+```
+saved each day:   3   1   4   1   5
+running total:    3   4   8   9  14
+```
+
+How much did you save from day 2 to day 4? Take the total at day 4 and subtract the total at day 1: 9 − 3 = 6. No adding up needed.
+
+- **Prefix sum + hash map:** write every running total in a notebook. If you need a stretch that adds up to 5 and your total is now 12, ask "did my total ever equal 7?" If it did, the days since then add up to 5.
+- **Changing the problem:** to find a stretch with equal 0s and 1s, count each 1 as +1 and each 0 as −1, like a tug-of-war score. A score that's the same as an earlier one means the stretch between them is balanced.
+- **Difference array:** to give 2 stickers to kids 1 through 3, you don't visit each kid. Leave a "+2 starts here" note at kid 1 and a "−2 stops here" note at kid 4. One walk down the line at the end hands everything out.
+- **2D prefix sums:** the same trick on a chocolate bar grid. To count a rectangle, take the big rectangle, cut off the strip above and the strip to the left, then add back the corner you removed twice.
+
+**Remember:** do the adding once at the start, then every question becomes a quick subtraction.
+
 ## What you'll learn
 
 - 1-D prefix sums with a leading zero, and the `P[r+1] − P[l]` range formula.

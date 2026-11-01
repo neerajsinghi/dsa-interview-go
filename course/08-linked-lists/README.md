@@ -5,6 +5,19 @@ rewire pointers without losing part of the list or dereferencing nil. A
 handful of moves (dummy head, reverse, fast/slow pointers, splice) covers
 nearly every question.
 
+## Explain it like I'm a kid
+
+A linked list is a treasure hunt. Each clue holds one thing and tells you where the next clue is. To reach clue 5, you have to follow clues 1 to 4 first.
+
+- **Dummy head:** put a pretend "start here" clue in front of the first real one. Now even the first clue has a clue before it, so you need fewer special rules.
+- **Reversal:** turn each arrow around so it points backward. Before you turn one, remember where it was pointing, or you lose the rest of the trail.
+- **Fast and slow pointers:** a rabbit moves two clues at a time and a tortoise moves one. When the rabbit reaches the end, the tortoise is in the middle.
+- **Cycle detection (Floyd's):** if the trail loops back on itself, the rabbit laps the tortoise and they meet. If there's no loop, the rabbit simply reaches the end.
+- **N-th from the end:** two friends walk holding a rope n clues long. When the front friend reaches the end, the back friend is at the right spot.
+- **Combining the moves:** harder puzzles, like reversing groups of k clues, are these simple moves joined together.
+
+**Remember:** you can only follow arrows forward, so keep a finger on any clue you'll need again.
+
 ## What you'll learn
 
 - The `ListNode` type and test helpers (`FromSlice`, `ToSlice`) in [linkedlists.go](linkedlists.go).

@@ -1,5 +1,22 @@
 # 16 · Dynamic Programming in 2-D
 
+## Explain it like I'm a kid
+
+This is the same trick as the last lesson, saving answers so you don't redo them. But now each answer depends on **two things**, so you save your answers in a grid, like a times table.
+
+There are three common shapes:
+
+- **Grid DP:** a robot walks across a chessboard, moving only right or down. The ways to reach a square are the ways to reach the square above it plus the ways to reach the square on its left.
+- **Two words:** compare two words using a chart with one word across the top and the other down the side. Each square answers a question about the first few letters of each word. "Longest common subsequence" finds the letters they share in the same order. "Edit distance" counts the fewest letter changes to turn one word into the other, like "cat" into "cut".
+- **Intervals:** to answer a question about a long stretch, solve the short stretches first, then build up. With Burst Balloons, you ask "which balloon pops *last* in this stretch?"
+
+Two more ideas:
+
+- **Rolling array:** each row only needs the row before it, so keep just one row and save lots of space.
+- **Knapsack:** you have a bag that holds only so much, and you choose treasures to pack. When you use one row, go through the sizes from big to small, so you can't accidentally pack the same treasure twice.
+
+**Remember:** when an answer needs two numbers to describe it, make a grid and fill it in order.
+
 ## What you'll learn
 
 - How to spot problems whose state needs **two indices** — two strings, a grid, or an interval `[i, j]`.

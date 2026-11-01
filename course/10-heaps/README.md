@@ -5,6 +5,23 @@ insert or remove in O(log n). Use it when the question keeps asking "what's the 
 item right now?" while the set of items changes, or when you only need the
 top k of a large stream.
 
+## Explain it like I'm a kid
+
+A heap is a line where the smallest kid is always at the front, even when kids join or leave. It's not fully sorted. It only makes sure the front is right, which is why it's so fast.
+
+Picture a pyramid where each kid must be shorter than the two kids directly below them. The shortest kid ends up at the top.
+
+- **Push (sift up):** a new kid starts at the bottom and swaps places with the kid above until the rule is true again.
+- **Pop (sift down):** the top kid leaves, the last kid moves to the top, then swaps with the shorter kid below until the rule is true again.
+- **Heapify:** a fast way to turn a whole crowd into a pyramid at once, fixing it from the bottom up.
+- **Top-k:** to keep the 3 tallest kids on a team, the shortest team member stands at the door. A new kid only has to beat that one to join, and then that member leaves.
+- **Quickselect:** to find one particular kid, like the 3rd tallest, pick any kid and split the rest into shorter and taller. Then only look in the group that holds the answer.
+- **K-way merge:** you have several sorted piles of cards. Look only at the top card of each, and take the smallest.
+- **Greedy scheduling:** always do the most urgent or most common job next.
+- **Two heaps for the median:** split the kids into a shorter half and a taller half. The tallest of the short half and the shortest of the tall half stand at the doors, so the middle height is always right there.
+
+**Remember:** when you keep asking "who's the best right now?" while things change, use a heap.
+
 ## What you'll learn
 
 - How a binary heap is laid out in an array, and how `siftUp` / `siftDown` keep

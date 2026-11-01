@@ -3,6 +3,21 @@
 > The single most useful optimisation in interviews: replace a search with a
 > hash-map lookup. O(n²) becomes O(n) for the price of O(n) memory.
 
+## Explain it like I'm a kid
+
+An **array** is a row of numbered lockers. If you know the number, you can go straight there. If you don't, you have to open them one by one.
+
+A **hash map** is a magic notebook. Ask "where is Sam's lunchbox?" and it tells you straight away, without searching.
+
+- **Set:** a guest list. It only answers "is this person here?", so it's great for spotting duplicates.
+- **Count array:** 26 little boxes, one for each letter, with a marble dropped in for each letter you see.
+- **Canonical key:** "listen" and "silent" use the same letters. Sort the letters and both become "eilnst", so they get the same label and go in the same group.
+- **Bucket sort:** make piles labelled "seen once", "seen twice" and so on. No sorting needed, you just put things in the right pile.
+- **Prefix and suffix passes:** walk the row from the left and remember what you saw, then do the same from the right. Each spot now knows about both sides.
+- **Length-prefix framing:** to join words so they can be split apart later, write the length first, like `5:hello`. It works even if the word contains strange symbols.
+
+**Remember:** when you keep searching for something, write it in the magic notebook instead.
+
 ## What you'll learn
 
 - When a map, a set (`map[T]struct{}`) or a fixed-size count array (`[26]int`) is the right tool.

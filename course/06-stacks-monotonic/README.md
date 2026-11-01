@@ -5,6 +5,21 @@ dealt with yet?* That one question covers bracket matching, expression
 evaluation, nested decoding, and, with a monotonic stack, the whole "next
 greater / next smaller" family.
 
+## Explain it like I'm a kid
+
+A **stack** is a pile of plates. You put new plates on top and take plates off the top. The last one on is the first one off.
+
+- **Matching brackets:** when you see `(`, put it on the pile. When you see `)`, the top of the pile must be its partner. If it isn't, or the pile isn't empty at the end, the brackets are wrong.
+- **Postfix calculator:** in `3 4 +`, numbers go on the pile, and `+` takes two off, adds them, and puts back 7.
+- **Decoding:** `3[ab]` means "ab" three times. When a new bracket opens, put what you've got on the pile and start fresh. When it closes, repeat the new part and join it to what you saved.
+
+A **monotonic stack** keeps its items in order, always shrinking or always growing.
+
+- **Next taller kid:** kids stand in a line and each wants to know who is the first taller kid to their right. Shorter kids wait on the pile. When a tall kid comes along, every shorter kid on top of the pile says "that's my answer!" and leaves.
+- **Largest rectangle:** to find the biggest rectangle in a row of towers, work out how far each tower can stretch sideways before it hits a shorter one. The pile finds those limits in one walk.
+
+**Remember:** a stack is for when the most recent unfinished thing has to be dealt with first.
+
 ## What you'll learn
 
 - A generic `Stack[T]` in Go, and when to just use a raw slice instead.

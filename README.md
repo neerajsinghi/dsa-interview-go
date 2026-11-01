@@ -11,6 +11,7 @@ Most interview prep teaches problems. This course teaches **patterns**: how to s
 - **Brute force first, then optimal.** Where it helps, problems show both, mirroring how you should talk through a solution in an interview.
 - **Written for Go interviews.** Idiomatic Go, plus the Go-specific traps interviewers notice: slice aliasing in backtracking, `rune` vs `byte`, integer overflow, `container/heap` boilerplate.
 - **Standard library only.** `go test ./...` is all you need.
+- **Explained simply first.** Each lesson opens with an *Explain it like I'm a kid* section, using everyday pictures like toy boxes and treasure hunts. Start there if a topic is new to you.
 
 Companion to [system-design-patterns-go](https://github.com/neerajsinghi/system-design-patterns-go), which covers the system design round the same way.
 
@@ -81,7 +82,7 @@ Eight weeks at about an hour a day. Already comfortable with the basics? Skim 01
 
 ```
 course/NN-topic/
-├── README.md           the lesson: recognize the pattern, the idea, a Go template, pitfalls, problem list
+├── README.md           the lesson: a kid-friendly explanation, recognize the pattern, the idea, a Go template, pitfalls, problem list
 ├── <topic>.go          the data structure or reusable templates for the pattern
 ├── pNN_<name>.go       one problem: statement, examples, key insight, complexity, solution(s)
 └── pNN_<name>_test.go  table-driven and randomized tests

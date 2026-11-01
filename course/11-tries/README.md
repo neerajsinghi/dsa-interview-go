@@ -1,5 +1,21 @@
 # 11 · Tries (prefix trees)
 
+## Explain it like I'm a kid
+
+A trie is how your phone guesses your word. Type "ca" and it thinks of "cat", "car" and "card".
+
+It's a tree of letters where words share their beginnings. "Cat" and "car" both walk down `c` → `a`, then split. Each spot that finishes a word gets a little star.
+
+- **Search:** walk down the letters. If you end on a star, the word is there.
+- **Starts with:** walk down the letters. If the path exists, some word starts that way.
+- **Delete:** each spot keeps a count of the words passing through it. When a count reaches 0, you can cut that branch off.
+- **Wildcard search:** `c.t` means "any letter in the middle". At the dot, try every branch.
+- **Autocomplete:** walk to where the typed letters end, then explore in a to z order and stop after 3 words. They come out in alphabetical order.
+- **Word Search II:** to find many words in a letter grid, walk the grid and the trie together. If no word starts with those letters, stop right away.
+- **Bitwise trie:** the same tree, but with only 0 and 1 instead of letters. To get the biggest XOR, take the opposite branch at each step whenever you can, starting from the most important bit.
+
+**Remember:** when a question is about how words start, use a trie.
+
 ## What you'll learn
 
 - How a trie stores a set of strings so that every **prefix** is a node.

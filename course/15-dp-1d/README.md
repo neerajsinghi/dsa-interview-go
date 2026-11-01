@@ -1,5 +1,40 @@
 # 15 · Dynamic programming (1-D)
 
+## Explain it like I'm a kid
+
+What's 1+1+1+1+1? It's 5. Now add another +1. You didn't count again, you just remembered 5 and added 1. That's **dynamic programming**: save answers so you never work them out twice.
+
+**Stairs example:** you climb 1 or 2 steps at a time. The ways to reach step 4 are the ways to reach step 3 plus the ways to reach step 2:
+
+```
+step:   1   2   3   4   5
+ways:   1   2   3   5   8
+```
+
+Every DP puzzle needs the same five things:
+
+1. **State:** what am I working out? ("The ways to reach step i.")
+2. **Transition:** how do smaller answers build this one?
+3. **Base case:** which answers do I already know?
+4. **Order:** what do I need to work out first?
+5. **Answer:** which saved value does the puzzle want?
+
+There are several ways to save the answers:
+
+- **Memoization (top-down):** start from the big question and write down each answer as you find it.
+- **Table (bottom-up):** fill in a chart from the smallest answers upward.
+- **Space saving:** often you only need the last few answers, so you can throw away the rest.
+
+Some common kinds of puzzle:
+
+- **Take or skip (House Robber):** take cookies from jars in a row, but never from two jars side by side.
+- **Unbounded or 0/1 knapsack:** can you reuse a coin as often as you like (Coin Change), or use each item only once (Partition)? The direction of the loop decides which one you get.
+- **Splitting into pieces (Word Break):** "can the letters up to here be split into real words?"
+- **Ends here (longest increasing subsequence):** "what's the best chain that ends with this number?"
+- **Two running scores (max product):** keep both the biggest and smallest products, because a negative number can flip the smallest into the biggest.
+
+**Remember:** if you keep solving the same smaller puzzle, write the answer down.
+
 ## What you'll learn
 
 - A repeatable **DP framework**: state → transition → base case → order → answer.

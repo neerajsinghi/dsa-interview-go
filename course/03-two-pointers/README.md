@@ -3,6 +3,18 @@
 > Two indices walking through the same slice can replace a nested loop. When
 > the data is sorted (or can be), each step rules out a whole row of pairs.
 
+## Explain it like I'm a kid
+
+Imagine two friends pointing at items on a shelf. Together they can often finish the job in one walk, instead of comparing every item with every other item.
+
+- **Opposite ends:** toys are lined up from cheapest to most expensive, and you want two that cost exactly 9 coins. One friend starts at the cheap end, the other at the expensive end. Too much? The right friend moves to something cheaper. Too little? The left friend moves to something pricier.
+- **Palindromes:** to check "racecar", the friends compare letters from both ends and walk inward.
+- **Same direction (read and write):** one friend looks at every item while the other keeps only the good ones at the front of the shelf. This cleans up the shelf without needing a second one.
+- **Three regions (Dutch flag):** to sort red, white and blue balls, keep red on the left, blue on the right, and white in the middle. Move each ball into its region as you reach it.
+- **Sort, then fix one:** to find three numbers that add up to a target, hold one number still and use the two friends to find the other two.
+
+**Remember:** each step lets you throw away choices that can never work. That's why it's so fast.
+
 ## What you'll learn
 
 - The two flavours: **opposite ends** (squeeze inwards) and **same direction** (read/write, slow/fast).

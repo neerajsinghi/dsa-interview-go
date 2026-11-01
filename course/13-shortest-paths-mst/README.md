@@ -1,5 +1,25 @@
 # 13 · Shortest paths & minimum spanning trees
 
+## Explain it like I'm a kid
+
+Now the roads have prices or lengths. There are two questions here: what's the cheapest way **to get somewhere**, and what's the cheapest way to **connect every town**?
+
+**Finding the shortest path:**
+
+- **Dijkstra:** always go next to the closest town you haven't finished. Once a town is finished, you can't find a shorter way to it. This only works if no road has a negative price.
+- **Bottleneck paths:** on a hike, only the hardest step counts. Dijkstra still works if you track the worst step so far instead of adding up the steps.
+- **Bellman-Ford:** some roads pay you to use them, so go over every road again and again, updating the best prices. If prices still drop after enough rounds, there's a loop that keeps making you money (a negative cycle).
+- **At most k stops:** Bellman-Ford also solves this, because each round allows one more road.
+- **0-1 BFS:** every road is either free or costs one coin. Places reached by a free road go to the front of the line, and places reached by a paid road go to the back.
+- **Floyd-Warshall:** make a chart of the distance between every pair of towns. For each town, ask "would stopping here make any trip shorter?"
+
+**Connecting all the towns as cheaply as possible (a minimum spanning tree):**
+
+- **Kruskal:** look at the roads from cheapest to most expensive. Build each road, unless its two towns are already connected. Union-find from the last lesson checks this.
+- **Prim:** start at one town and keep building the cheapest road that reaches a new town.
+
+**Remember:** the shortest path gets you from one place to another. A spanning tree connects everyone.
+
 ## What you'll learn
 
 - **Dijkstra** with `container/heap` and lazy deletion — the default for non-negative weights.

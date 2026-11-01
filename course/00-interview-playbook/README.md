@@ -3,6 +3,26 @@
 > Before any pattern: a repeatable way to run a 45-minute coding interview, the
 > complexity numbers you should know cold, and the Go idioms that keep you fast.
 
+## Explain it like I'm a kid
+
+A coding interview is like showing a friend how you solve a puzzle. They care about how you think, not only whether you finish. So follow the same seven steps every time:
+
+1. **Clarify:** ask questions until you know the rules of the game.
+2. **Examples:** try the puzzle by hand with a small example.
+3. **Brute force:** say the simple, slow way out loud, like looking under every cushion for your lost toy.
+4. **Optimise:** find the slow part and think of a better way.
+5. **Code:** write it neatly, so a friend could read it.
+6. **Test:** pretend to be the computer and follow your code step by step.
+7. **Analyse:** say how much work your solution does as the puzzle gets bigger.
+
+The other parts of this lesson are helpers:
+
+- **Thinking out loud:** like telling a friend your plan during a board game, so they can follow along and help.
+- **Big-O cheat sheet:** a chart that shows how fast each tool is.
+- **Pattern recognition:** clue words that tell you which trick to use, like a detective spotting muddy footprints.
+
+**Remember:** when you feel stuck, go to the next step. You always know what to do next.
+
 ## What you'll learn
 
 - A seven-step framework that works for almost any coding question.

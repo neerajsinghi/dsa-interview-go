@@ -1,5 +1,28 @@
 # 14 · Backtracking
 
+## Explain it like I'm a kid
+
+You're in a maze. At each fork, pick a path. At a dead end, walk back to the last fork and try another path. Backtracking solves puzzles the same way.
+
+It has three steps, repeated over and over:
+
+1. **Choose:** try something.
+2. **Explore:** see where that leads.
+3. **Unchoose:** take it back, so you can try the next thing.
+
+Most puzzles fit one of three shapes:
+
+- **Subsets and combinations:** for each pizza topping, say yes or no. Only move forward through the toppings, so you never count the same pizza twice.
+- **Permutations:** the different ways to line up your friends for a photo. Keep a list of who's already standing in line.
+- **Positions:** make one choice for each empty spot, as in Sudoku or N-Queens, where queens on a chessboard must not attack each other.
+
+Two tricks make it better:
+
+- **Removing duplicates:** with two identical red blocks, swapping them doesn't make a new answer. Sort the blocks, and at each step use only the first of any matching ones.
+- **Pruning:** if a path is already wrong, stop now. If your coins already add up to more than the target, adding more won't help.
+
+**Remember:** try it, explore, then undo it. Quitting bad paths early is what keeps it fast.
+
 ## What you'll learn
 
 - The single **choose → explore → unchoose** template behind subsets, permutations, combinations, partitions, grid search and puzzles.

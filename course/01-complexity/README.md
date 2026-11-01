@@ -4,6 +4,25 @@
 > those words concrete: you will *measure* the difference between O(log n),
 > O(n), O(n²) and O(φⁿ) with Go benchmarks.
 
+## Explain it like I'm a kid
+
+Big-O answers one question: **if the job gets bigger, how much more work is it?** It doesn't measure seconds. It tells you how the work grows.
+
+- **O(1):** grab the top cookie from a jar. 10 cookies or 1,000, it's one grab.
+- **O(log n):** find a word in a dictionary by opening it in the middle and throwing away half each time.
+- **O(n):** check every toy in the box, one at a time. Twice the toys, twice the work.
+- **O(n log n):** sort a big pile of cards by splitting it into small piles and combining them in order.
+- **O(n²):** every kid shakes hands with every other kid. 10 kids make about 50 handshakes, but 100 kids make about 5,000.
+- **O(2ⁿ):** try every yes-or-no combination of pizza toppings. One more topping doubles the choices.
+
+Three more ideas are in this lesson:
+
+- **Amortized cost:** when your toy box is full, you move everything to a box twice as big. That move is hard work, but it happens so rarely that each toy costs only a little on average.
+- **Space:** how much room you need on your desk while you work. Calling a function inside a function is like stacking sticky notes that say where you left off, and those notes take up room too.
+- **Recursion trees and memoization:** if you solve the same little problem again and again, the work explodes. Write the answer down the first time and the repeats disappear.
+
+**Remember:** a small job hides slow methods. Always ask what happens when the job gets huge.
+
 ## What you'll learn
 
 - What Big-O actually promises (and what it hides).

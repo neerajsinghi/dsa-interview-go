@@ -5,6 +5,20 @@ yes/no question whose answers look like `false false false true true true`
 and you want the boundary. A sorted array is just the most common source of
 such a question.
 
+## Explain it like I'm a kid
+
+Think of a number from 1 to 100. Guess 50. "Too high!" In one guess, you've thrown away half the numbers. You'll always find it within 7 guesses.
+
+**The rule:** binary search works whenever you can look at a spot and know which half to throw away.
+
+- **Lower and upper bound:** with many copies of the same number in a sorted row, the lower bound is where the first copy starts, and the upper bound is just after the last copy. This also tells you where a new number should go.
+- **Rotated array:** a sorted bookshelf where someone moved a chunk from the front to the back. Cut it in half and at least one half is still in order, so you can tell which half to search.
+- **2D matrix:** when a sorted grid reads like one long sorted list, row after row, you can search it just like a list.
+- **Two arrays at once:** to find the middle of two sorted lists together, search for the right place to cut each list without joining them.
+- **Binary search on the answer:** a monkey must eat all the bananas before the keeper returns. How slowly can it eat? Guess a speed and test it. Too slow? Try faster. Fast enough? Try slower. Here, you're searching through possible answers.
+
+**Remember:** if every guess can tell you "go higher" or "go lower", halve the choices each time.
+
 ## What you'll learn
 
 - One loop template (half-open `[lo, hi)`) that gives lower bound, upper bound,

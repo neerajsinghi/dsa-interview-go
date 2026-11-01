@@ -1,5 +1,18 @@
 # 12 · Graphs: BFS, DFS, topological sort, union-find
 
+## Explain it like I'm a kid
+
+A graph is a map of dots joined by lines, like towns and roads. A grid is a graph too: each square is joined to its neighbours.
+
+- **BFS (breadth-first search):** drop a pebble in a pond and watch the ripples. You reach everything 1 step away, then 2 steps, and so on. That's why it finds the fewest steps.
+- **Multi-source BFS:** drop several pebbles at once. This is how rot spreads from many bad oranges at the same time.
+- **DFS (depth-first search):** explore a cave by going down one tunnel as far as you can, then coming back to try the next one. It's good for questions like "can I get there?" and "how many islands are there?"
+- **Cycle detection (three colours):** colour places white if you haven't been there, grey if they're on your current path, and black if you've finished with them. Walking into a grey place means you've gone in a circle.
+- **Topological sort:** putting on clothes in order, because socks must go on before shoes. Kahn's way is to keep doing any job with nothing left waiting before it. Reversed DFS order gets the same kind of answer by working from the last job back. If you get stuck with jobs left over, they're waiting on each other in a circle.
+- **Union-find:** groups of friends, each with a captain. To see if two kids are in the same group, compare their captains. To join two groups, the smaller group's captain follows the bigger group's captain. **Path compression** means each kid remembers the captain directly, so the next question is faster.
+
+**Remember:** when things are connected to other things, draw dots and lines and it's probably a graph puzzle.
+
 ## What you'll learn
 
 - Turning an interview prompt into a graph: explicit edge lists, grids, words, letters.

@@ -1,5 +1,22 @@
 # 18 · Bit Manipulation
 
+## Explain it like I'm a kid
+
+Inside a computer, each number is a row of tiny light switches called **bits**. Off is 0 and on is 1. The number 5 is `0101`.
+
+- **Two's complement (negative numbers):** think of a car's distance counter rolling backward. Go back one from all zeros and every digit flips, so all 1s means −1. To turn 5 into −5, flip every switch, then add 1.
+- **Masks:** a card with holes in it that you lay over the switches, so you can check or change only the ones you want.
+- **Testing, setting, clearing and toggling:** look at a switch, turn it on, turn it off, or flip it.
+- **`x & (x-1)`:** turns off the rightmost switch that's on. Count how many times you can do this and you've counted the switches that are on.
+- **`x & -x`:** finds the rightmost switch that's on.
+- **Power of two:** only one switch is on, so turning it off leaves zero.
+- **XOR cancels pairs:** like matching socks. In `4, 1, 2, 1, 2`, each pair disappears and the lonely 4 is left over.
+- **Counting each position:** if each number appears three times except one, count the on-switches at each position. Any count that doesn't divide by 3 belongs to the lonely number.
+- **Bitmask as a set:** use one switch per toy, on for "I'm taking it" and off for "I'm not". One number can then describe a whole choice of toys.
+- **Adding without `+`:** XOR adds without carrying, and AND finds the carries. Shift the carries left and repeat until none are left, as you do in column addition.
+
+**Remember:** when a puzzle has pairs, on-or-off choices, or "no extra memory", think about the switches.
+
 ## What you'll learn
 
 - How integers are stored (**two's complement**) and why that makes `-x == ^x + 1`.
