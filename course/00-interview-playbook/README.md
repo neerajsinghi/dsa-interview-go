@@ -29,6 +29,7 @@ The other parts of this lesson are helpers:
 - How to think out loud so the interviewer can follow (and help).
 - A Big-O cheat sheet for Go data structures and classic algorithms.
 - How to map wording in a problem statement to a technique — and to the module in this course that teaches it.
+- How to recognize the pattern during the interview itself: four questions, decision flowcharts, worked examples and common look-alikes.
 - The Go standard-library idioms you will reach for in nearly every problem (see [`gotchas.go`](gotchas.go)).
 
 ## The framework
@@ -129,6 +130,190 @@ Constraints are a hint. Rough budget for ~10⁸ simple operations per second:
 | "Single number", powers of two, subsets as masks, no extra space | Bit manipulation | [18-bit-manipulation](../18-bit-manipulation/README.md) |
 | Pattern matching, palindromic substrings, string hashing | String algorithms | [19-strings](../19-strings/README.md) |
 | "Design a cache / rate limiter / data structure with O(1) ops" | Composite data structures | [20-design-problems](../20-design-problems/README.md) |
+
+## How to recognize the pattern in an interview
+
+The table above lists the clues. This section is about using them under pressure: the first two or three minutes of an interview, when you have a problem statement and no idea yet which trick it needs.
+
+Think like a detective. Don't guess the answer from the title. Collect clues from the statement, then let them point to a technique.
+
+### Ask four questions, in order
+
+```mermaid
+flowchart LR
+    A["1. What is the input?<br/>array, string, list, tree,<br/>grid, intervals, stream"] --> B["2. What is asked?<br/>one answer, count,<br/>min/max, all options"]
+    B --> C["3. What do the<br/>constraints allow?<br/>n tells you the Big-O"]
+    C --> D["4. Where is the brute<br/>force slow?<br/>that step names the fix"]
+```
+
+1. **What is the input?** The shape of the data narrows the choice to a few modules.
+2. **What is asked?** "Longest stretch", "number of ways", "all subsets" and "k-th largest" each point somewhere different.
+3. **What do the constraints allow?** The size of `n` tells you how fast the solution must be, and so which techniques are in or out.
+4. **Where is the brute force slow?** Say the simple solution out loud, then find the line that repeats work. The tool that removes that repeated work is usually the pattern.
+
+### Visual 1: start from the input
+
+```mermaid
+flowchart TD
+    S["Read the problem"] --> Q{"What is the input?"}
+    Q -->|"array or string"| A["Use Visual 2"]
+    Q -->|"linked list"| L["08 Linked lists<br/>dummy head, fast and slow pointers"]
+    Q -->|"tree"| T["09 Trees<br/>DFS or level-order BFS"]
+    Q -->|"grid, network, or tasks<br/>that depend on each other"| G{"Do edges have<br/>different costs?"}
+    G -->|"no"| G1["12 Graphs<br/>BFS, DFS, topological sort, union-find"]
+    G -->|"yes"| G2["13 Shortest paths and MST<br/>Dijkstra, Bellman-Ford, Kruskal, Prim"]
+    Q -->|"intervals with start and end"| I["17 Greedy and intervals<br/>sort by start or by end"]
+    Q -->|"a stream of values"| H["10 Heaps<br/>top k, running median"]
+    Q -->|"a dictionary of words"| W["11 Tries<br/>prefixes, autocomplete"]
+    Q -->|"design a class with fast operations"| D["20 Design problems"]
+```
+
+Grids, prerequisites and "who knows whom" are graphs even when the word "graph" never appears.
+
+### Visual 2: arrays and strings
+
+Most interview problems take an array or a string, so this is the branch you'll use most.
+
+```mermaid
+flowchart TD
+    A{"What does it ask for?"} -->|"a pair or group<br/>that matches a target"| P{"Sorted, or allowed<br/>to sort?"}
+    P -->|"yes"| P1["03 Two pointers"]
+    P -->|"no"| P2["02 Hash map<br/>have I seen the partner?"]
+    A -->|"longest or shortest<br/>contiguous stretch"| W{"All values non-negative,<br/>or a string?"}
+    W -->|"yes"| W1["04 Sliding window"]
+    W -->|"no, negatives allowed"| W2["05 Prefix sums + hash map"]
+    A -->|"sums over many ranges"| R["05 Prefix sums"]
+    A -->|"next greater or smaller,<br/>matching brackets"| S["06 Stack or monotonic stack"]
+    A -->|"find in sorted data, or<br/>the smallest X that works"| B["07 Binary search"]
+    A -->|"k-th largest or top k"| H["10 Heap or quickselect"]
+    A -->|"a pattern inside text,<br/>palindromes"| T["19 String algorithms"]
+    A -->|"every value twice but one,<br/>no extra space"| X["18 Bit manipulation"]
+```
+
+### Visual 3: what kind of answer?
+
+When the input doesn't settle it, look at the answer they want.
+
+```mermaid
+flowchart TD
+    A{"What kind of answer?"} -->|"list every combination,<br/>subset or order"| B["14 Backtracking"]
+    A -->|"count the ways, or<br/>the min or max cost"| C{"Is the best move now<br/>always safe?"}
+    C -->|"yes, and you can prove it"| G["17 Greedy"]
+    C -->|"no, choices affect later ones"| D{"How many numbers<br/>describe a smaller problem?"}
+    D -->|"one: a position or amount"| D1["15 DP in 1-D"]
+    D -->|"two: two strings, a grid cell,<br/>or a range i to j"| D2["16 DP in 2-D"]
+    A -->|"fewest steps or moves"| E{"Does every step<br/>cost the same?"}
+    E -->|"yes"| E1["12 BFS"]
+    E -->|"no"| E2["13 Dijkstra"]
+```
+
+### Let the constraints narrow it down
+
+The [constraints table](#the-framework) shows how much work fits in time. Read it the other way round, too: the limit on `n` rules techniques in and out.
+
+| If n is up to | You can afford | Which suggests |
+|---|---|---|
+| 10–12 | O(n!) | trying every order: [14 backtracking](../14-backtracking/README.md) |
+| 20–25 | O(2ⁿ) | trying every subset: [14 backtracking](../14-backtracking/README.md), bitmasks from [18](../18-bit-manipulation/README.md) |
+| about 500 | O(n³) | interval DP in [16](../16-dp-2d/README.md), Floyd-Warshall in [13](../13-shortest-paths-mst/README.md) |
+| about 5,000 | O(n²) | DP over pairs, or a careful brute force |
+| up to 10⁶ | O(n log n) | sorting, heaps, binary search |
+| beyond 10⁶ | O(n) or O(log n) | one pass: hash maps, two pointers, windows, prefix sums, stacks |
+
+If `n` is small, that's a hint. Interviewers don't write "n ≤ 20" by accident.
+
+### Find the slow step in the brute force
+
+Say the simple solution first. Then point at the line that repeats work and swap in the tool that removes it.
+
+| The brute force keeps… | Replace it with | Module |
+|---|---|---|
+| searching the whole array for a partner value | a hash map lookup | [02](../02-arrays-hashing/README.md) |
+| checking every pair in sorted data | two pointers moving inward | [03](../03-two-pointers/README.md) |
+| recounting a stretch every time it moves by one | a sliding window update | [04](../04-sliding-window/README.md) |
+| adding up the same range again and again | prefix sums | [05](../05-prefix-sums/README.md) |
+| scanning right for the next bigger value | a monotonic stack | [06](../06-stacks-monotonic/README.md) |
+| trying every possible answer from 1 upward | binary search on the answer | [07](../07-binary-search/README.md) |
+| sorting everything just to read the top k | a heap of size k | [10](../10-heaps/README.md) |
+| comparing each word letter by letter with many others | a trie | [11](../11-tries/README.md) |
+| solving the same smaller problem many times | dynamic programming | [15](../15-dp-1d/README.md), [16](../16-dp-2d/README.md) |
+| restarting a text match from scratch after a mismatch | KMP or a rolling hash | [19](../19-strings/README.md) |
+
+### Four worked examples
+
+Each example puts the clue words in bold, then follows them to a technique.
+
+**[Longest Substring Without Repeating Characters](../04-sliding-window/p04_longest_substring_no_repeat.go)**
+
+> Given a **string** s, find the length of the **longest substring** **without repeating** characters.
+
+```
+string  →  "longest"  →  substring means contiguous  →  a rule to keep  →  SLIDING WINDOW (04)
+```
+
+The brute force checks every substring. The window keeps the stretch that obeys the rule and only moves its edges.
+
+**[Koko Eating Bananas](../07-binary-search/p07_koko_bananas.go)**
+
+> Return the **minimum** eating speed k **such that** Koko can eat all the bananas **within h hours**.
+
+```
+"minimum k such that"  →  if speed k works, every faster speed works too  →  BINARY SEARCH ON THE ANSWER (07)
+```
+
+Whenever the answers look like "no, no, no, yes, yes, yes", you can binary search for the first "yes".
+
+**[Course Schedule](../12-graphs/p04_course_schedule.go)**
+
+> There are n courses. **prerequisites**[i] = [a, b] means you must take b **before** a. **Can you finish** them all?
+
+```
+"before" means an arrow b → a  →  a directed graph  →  stuck only if there's a cycle  →  TOPOLOGICAL SORT (12)
+```
+
+The word "graph" never appears. "Prerequisites", "dependencies" and "build order" are the disguise.
+
+**[Coin Change](../15-dp-1d/p05_coin_change.go)**
+
+> Given coin values and an amount, return the **fewest coins** that make up the amount.
+
+```
+"fewest"  →  min cost  →  is taking the biggest coin always safe?  →  no, coins 1, 3, 4 for 6  →  DP (15)
+```
+
+A min or max question tempts you towards greedy. Test it on a small example first. When one counterexample breaks it, switch to DP.
+
+### Look-alikes that trip people up
+
+| It looks like… | But check… | If so, use… |
+|---|---|---|
+| a sliding window | Can numbers be negative? Then shrinking the window may not lower the sum. | prefix sums + hash map ([05](../05-prefix-sums/README.md)) |
+| greedy | Can you find one small example where the greedy choice loses? | DP ([15](../15-dp-1d/README.md)) |
+| BFS for the shortest path | Do the edges cost different amounts? | Dijkstra ([13](../13-shortest-paths-mst/README.md)) |
+| backtracking | Do they want a *count* rather than the full *list*? | often DP, because a count doesn't need every answer listed |
+| sorting | Is the data arriving as a stream, or do they only need the top k? | a heap ([10](../10-heaps/README.md)) |
+| binary search on an index | Is the data unsorted, but the answer has a yes/no boundary? | binary search on the answer ([07](../07-binary-search/README.md)) |
+| a hash map | Do they ask for O(1) extra space? | two pointers ([03](../03-two-pointers/README.md)) or bit tricks ([18](../18-bit-manipulation/README.md)) |
+
+### Say your reasoning out loud
+
+Interviewers want to hear how you found the pattern, not only the name of it. A useful script:
+
+> "The input is an unsorted array and I need the longest stretch whose sum is k. Brute force checks every subarray, which is O(n²). The values can be negative, so a sliding window won't work. I'll use prefix sums with a hash map, which is O(n) time and O(n) space."
+
+That's one sentence for each of the four questions, followed by the complexity.
+
+### When nothing fits
+
+1. Solve two tiny examples by hand and watch what you do. You'll often find yourself using the pattern without noticing.
+2. Write the brute force and look for the repeated work.
+3. Ask whether sorting the input would help. Many patterns only appear after a sort.
+4. Ask whether a smaller version of the problem would help you solve the bigger one. That's recursion, which leads to DP or backtracking.
+5. Tell the interviewer which ideas you're weighing. They'll often nudge you.
+
+### Practise recognizing on its own
+
+Spotting the pattern is a separate skill from coding it, so practise it separately. Pick problems at random from the module lists, read only the statement, and give yourself 60 seconds to name the technique and say why. Then check the problem's *Key idea* column. Ten a day for a week makes a big difference.
 
 ## Go for coding interviews
 

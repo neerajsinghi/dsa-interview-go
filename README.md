@@ -71,7 +71,7 @@ Eight weeks at about an hour a day. Already comfortable with the basics? Skim 01
 
 ## How to practise
 
-1. **Read the lesson**, especially *Recognize the pattern*. Spotting the pattern is most of the battle.
+1. **Read the lesson**, especially *Recognize the pattern*. Spotting the pattern is most of the battle. The playbook's [How to recognize the pattern in an interview](course/00-interview-playbook/README.md#how-to-recognize-the-pattern-in-an-interview) section has flowcharts that walk you from the problem statement to the right module.
 2. **Solve before you look.** Read the problem's doc comment, then write your own solution in a scratch file with the same function signature, or delete the body of the provided one (`git checkout` brings it back).
 3. **Run the tests** for that problem: `go test ./course/<module>/ -run <TestName> -v`. The randomized tests will catch the edge cases you missed.
 4. **Compare** with the reference solution and its complexity analysis.
