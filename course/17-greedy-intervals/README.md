@@ -125,17 +125,17 @@ for _, iv := range byEnd {
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Maximum Subarray](p01_maximum_subarray.go) | Medium | Kadane: extend or restart; drop negative prefixes |
-| 02 | [Jump Game](p02_jump_game.go) | Medium | Track farthest reach; fail if `i > reach` |
-| 03 | [Jump Game II](p03_jump_game_ii.go) | Medium | BFS levels as index windows |
-| 04 | [Gas Station](p04_gas_station.go) | Medium | Restart after the failing station; check total |
-| 05 | [Merge Intervals](p05_merge_intervals.go) | Medium | Sort by start, merge into last |
-| 06 | [Insert Interval](p06_insert_interval.go) | Medium | Three phases: before / overlapping / after |
-| 07 | [Non-overlapping Intervals](p07_non_overlapping_intervals.go) | Medium | Sort by end, keep earliest finisher (exchange argument) |
-| 08 | [Meeting Rooms II](p08_meeting_rooms_ii.go) | Medium | Peak live count: min-heap of ends or sweep |
-| 09 | [Partition Labels](p09_partition_labels.go) | Medium | Last occurrence → implicit interval merge |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Maximum Subarray](p01_maximum_subarray.go) | Medium | Kadane: extend or restart; drop negative prefixes | [▶ Watch](walkthroughs/p01_maximum_subarray.md) |
+| 02 | [Jump Game](p02_jump_game.go) | Medium | Track farthest reach; fail if `i > reach` | [▶ Watch](walkthroughs/p02_jump_game.md) |
+| 03 | [Jump Game II](p03_jump_game_ii.go) | Medium | BFS levels as index windows | [▶ Watch](walkthroughs/p03_jump_game_ii.md) |
+| 04 | [Gas Station](p04_gas_station.go) | Medium | Restart after the failing station; check total | [▶ Watch](walkthroughs/p04_gas_station.md) |
+| 05 | [Merge Intervals](p05_merge_intervals.go) | Medium | Sort by start, merge into last | [▶ Watch](walkthroughs/p05_merge_intervals.md) |
+| 06 | [Insert Interval](p06_insert_interval.go) | Medium | Three phases: before / overlapping / after | [▶ Watch](walkthroughs/p06_insert_interval.md) |
+| 07 | [Non-overlapping Intervals](p07_non_overlapping_intervals.go) | Medium | Sort by end, keep earliest finisher (exchange argument) | [▶ Watch](walkthroughs/p07_non_overlapping_intervals.md) |
+| 08 | [Meeting Rooms II](p08_meeting_rooms_ii.go) | Medium | Peak live count: min-heap of ends or sweep | [▶ Watch](walkthroughs/p08_meeting_rooms_ii.md) |
+| 09 | [Partition Labels](p09_partition_labels.go) | Medium | Last occurrence → implicit interval merge | [▶ Watch](walkthroughs/p09_partition_labels.md) |
 
 ## Practice tip
 

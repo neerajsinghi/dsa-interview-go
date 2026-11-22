@@ -128,16 +128,16 @@ a sign-safe `mod`.
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Range Sum Query — Immutable](p01_range_sum_query.go) | Easy | `P[r+1] − P[l]` |
-| 02 | [Find Pivot Index](p02_pivot_index.go) | Easy | right = total − left − self |
-| 03 | [Left and Right Sum Differences](p03_left_right_difference.go) | Easy | Prefix and suffix from one running sum |
-| 04 | [Range Addition (difference array)](p04_difference_array.go) | Medium | +d at l, −d at r+1, prefix once |
-| 05 | [Subarray Sum Equals K](p05_subarray_sum_k.go) | Medium | Count earlier prefixes equal to `P − k` |
-| 06 | [Contiguous Array](p06_contiguous_array.go) | Medium | 0 → −1; first index of each balance |
-| 07 | [Continuous Subarray Sum](p07_continuous_subarray_sum.go) | Medium | Equal remainders mod k, span ≥ 2 |
-| 08 | [Range Sum Query 2D — Immutable](p08_range_sum_2d.go) | Medium | Padded 2-D prefix + inclusion–exclusion |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Range Sum Query — Immutable](p01_range_sum_query.go) | Easy | `P[r+1] − P[l]` | [▶ Watch](walkthroughs/p01_range_sum_query.md) |
+| 02 | [Find Pivot Index](p02_pivot_index.go) | Easy | right = total − left − self | [▶ Watch](walkthroughs/p02_pivot_index.md) |
+| 03 | [Left and Right Sum Differences](p03_left_right_difference.go) | Easy | Prefix and suffix from one running sum | [▶ Watch](walkthroughs/p03_left_right_difference.md) |
+| 04 | [Range Addition (difference array)](p04_difference_array.go) | Medium | +d at l, −d at r+1, prefix once | [▶ Watch](walkthroughs/p04_difference_array.md) |
+| 05 | [Subarray Sum Equals K](p05_subarray_sum_k.go) | Medium | Count earlier prefixes equal to `P − k` | [▶ Watch](walkthroughs/p05_subarray_sum_k.md) |
+| 06 | [Contiguous Array](p06_contiguous_array.go) | Medium | 0 → −1; first index of each balance | [▶ Watch](walkthroughs/p06_contiguous_array.md) |
+| 07 | [Continuous Subarray Sum](p07_continuous_subarray_sum.go) | Medium | Equal remainders mod k, span ≥ 2 | [▶ Watch](walkthroughs/p07_continuous_subarray_sum.md) |
+| 08 | [Range Sum Query 2D — Immutable](p08_range_sum_2d.go) | Medium | Padded 2-D prefix + inclusion–exclusion | [▶ Watch](walkthroughs/p08_range_sum_2d.md) |
 
 ## Practice tip
 

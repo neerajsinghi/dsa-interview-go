@@ -128,16 +128,16 @@ Variations: flip `<` to `>` for next *smaller*; iterate right-to-left for
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Valid Parentheses](p01_valid_parentheses.go) | Easy | Stack of openers; top must match the closer |
-| 02 | [Min Stack](p02_min_stack.go) | Medium | Store running min alongside each entry |
-| 03 | [Evaluate Reverse Polish Notation](p03_eval_rpn.go) | Medium | Operand stack; pop right operand first |
-| 04 | [Daily Temperatures](p04_daily_temperatures.go) | Medium | Monotonic decreasing stack of indices |
-| 05 | [Next Greater Element (circular)](p05_next_greater_circular.go) | Medium | Monotonic stack over two passes (`i % n`) |
-| 06 | [Car Fleet](p06_car_fleet.go) | Medium | Sort by position; stack of arrival times |
-| 07 | [Decode String](p07_decode_string.go) | Medium | Stack of saved (prefix, k) contexts |
-| 08 | [Largest Rectangle in Histogram](p08_largest_rectangle.go) | Hard | Monotonic increasing stack; pop gives width between shorter bars |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Valid Parentheses](p01_valid_parentheses.go) | Easy | Stack of openers; top must match the closer | [▶ Watch](walkthroughs/p01_valid_parentheses.md) |
+| 02 | [Min Stack](p02_min_stack.go) | Medium | Store running min alongside each entry | [▶ Watch](walkthroughs/p02_min_stack.md) |
+| 03 | [Evaluate Reverse Polish Notation](p03_eval_rpn.go) | Medium | Operand stack; pop right operand first | [▶ Watch](walkthroughs/p03_eval_rpn.md) |
+| 04 | [Daily Temperatures](p04_daily_temperatures.go) | Medium | Monotonic decreasing stack of indices | [▶ Watch](walkthroughs/p04_daily_temperatures.md) |
+| 05 | [Next Greater Element (circular)](p05_next_greater_circular.go) | Medium | Monotonic stack over two passes (`i % n`) | [▶ Watch](walkthroughs/p05_next_greater_circular.md) |
+| 06 | [Car Fleet](p06_car_fleet.go) | Medium | Sort by position; stack of arrival times | [▶ Watch](walkthroughs/p06_car_fleet.md) |
+| 07 | [Decode String](p07_decode_string.go) | Medium | Stack of saved (prefix, k) contexts | [▶ Watch](walkthroughs/p07_decode_string.md) |
+| 08 | [Largest Rectangle in Histogram](p08_largest_rectangle.go) | Hard | Monotonic increasing stack; pop gives width between shorter bars | [▶ Watch](walkthroughs/p08_largest_rectangle.md) |
 
 ## Practice tip
 

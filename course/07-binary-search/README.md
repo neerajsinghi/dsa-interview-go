@@ -135,16 +135,16 @@ and `FirstTrue`.
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Binary Search](p01_binary_search.go) | Easy | Closed-interval exact match, or lower bound + check |
-| 02 | [Search Insert Position](p02_search_insert.go) | Easy | It's the lower bound |
-| 03 | [First and Last Position](p03_first_last_position.go) | Medium | Lower bound and upper bound − 1 |
-| 04 | [Search a 2D Matrix](p04_search_2d_matrix.go) | Medium | Flat index k → (k/n, k%n) |
-| 05 | [Find Minimum in Rotated Sorted Array](p05_find_min_rotated.go) | Medium | Compare mid with the right end |
-| 06 | [Search in Rotated Sorted Array](p06_search_rotated.go) | Medium | One half is always sorted; check if target is inside it |
-| 07 | [Koko Eating Bananas](p07_koko_bananas.go) | Medium | Binary search on the answer (speed) |
-| 08 | [Median of Two Sorted Arrays](p08_median_two_sorted.go) | Hard | Binary search the partition of the shorter array |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Binary Search](p01_binary_search.go) | Easy | Closed-interval exact match, or lower bound + check | [▶ Watch](walkthroughs/p01_binary_search.md) |
+| 02 | [Search Insert Position](p02_search_insert.go) | Easy | It's the lower bound | [▶ Watch](walkthroughs/p02_search_insert.md) |
+| 03 | [First and Last Position](p03_first_last_position.go) | Medium | Lower bound and upper bound − 1 | [▶ Watch](walkthroughs/p03_first_last_position.md) |
+| 04 | [Search a 2D Matrix](p04_search_2d_matrix.go) | Medium | Flat index k → (k/n, k%n) | [▶ Watch](walkthroughs/p04_search_2d_matrix.md) |
+| 05 | [Find Minimum in Rotated Sorted Array](p05_find_min_rotated.go) | Medium | Compare mid with the right end | [▶ Watch](walkthroughs/p05_find_min_rotated.md) |
+| 06 | [Search in Rotated Sorted Array](p06_search_rotated.go) | Medium | One half is always sorted; check if target is inside it | [▶ Watch](walkthroughs/p06_search_rotated.md) |
+| 07 | [Koko Eating Bananas](p07_koko_bananas.go) | Medium | Binary search on the answer (speed) | [▶ Watch](walkthroughs/p07_koko_bananas.md) |
+| 08 | [Median of Two Sorted Arrays](p08_median_two_sorted.go) | Hard | Binary search the partition of the shorter array | [▶ Watch](walkthroughs/p08_median_two_sorted.md) |
 
 ## Practice tip
 

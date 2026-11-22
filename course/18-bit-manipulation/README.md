@@ -118,17 +118,17 @@ Most bit tricks are **O(1)** per word, or **O(w)** where w is the word width (32
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Single Number](p01_single_number.go) | Easy | XOR cancels pairs |
-| 02 | [Number of 1 Bits](p02_number_of_1_bits.go) | Easy | Kernighan: `n &= n-1` per set bit |
-| 03 | [Power of Two](p03_power_of_two.go) | Easy | `n > 0 && n&(n-1) == 0`; power-of-four mask |
-| 04 | [Missing Number](p04_missing_number.go) | Easy | XOR indices with values |
-| 05 | [Counting Bits](p05_counting_bits.go) | Easy | `ans[i] = ans[i&(i-1)] + 1` |
-| 06 | [Reverse Bits](p06_reverse_bits.go) | Easy | Shift loop, or swap halves with masks |
-| 07 | [Subsets via Bitmask](p07_subsets_bitmask.go) | Medium | Mask = subset; Gosper's hack for k-subsets |
-| 08 | [Single Number II](p08_single_number_ii.go) | Medium | Bit counts mod 3, or ones/twos state machine |
-| 09 | [Sum of Two Integers](p09_sum_of_two_integers.go) | Medium | XOR = sum, AND<<1 = carry, repeat |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Single Number](p01_single_number.go) | Easy | XOR cancels pairs | [▶ Watch](walkthroughs/p01_single_number.md) |
+| 02 | [Number of 1 Bits](p02_number_of_1_bits.go) | Easy | Kernighan: `n &= n-1` per set bit | [▶ Watch](walkthroughs/p02_number_of_1_bits.md) |
+| 03 | [Power of Two](p03_power_of_two.go) | Easy | `n > 0 && n&(n-1) == 0`; power-of-four mask | [▶ Watch](walkthroughs/p03_power_of_two.md) |
+| 04 | [Missing Number](p04_missing_number.go) | Easy | XOR indices with values | [▶ Watch](walkthroughs/p04_missing_number.md) |
+| 05 | [Counting Bits](p05_counting_bits.go) | Easy | `ans[i] = ans[i&(i-1)] + 1` | [▶ Watch](walkthroughs/p05_counting_bits.md) |
+| 06 | [Reverse Bits](p06_reverse_bits.go) | Easy | Shift loop, or swap halves with masks | [▶ Watch](walkthroughs/p06_reverse_bits.md) |
+| 07 | [Subsets via Bitmask](p07_subsets_bitmask.go) | Medium | Mask = subset; Gosper's hack for k-subsets | [▶ Watch](walkthroughs/p07_subsets_bitmask.md) |
+| 08 | [Single Number II](p08_single_number_ii.go) | Medium | Bit counts mod 3, or ones/twos state machine | [▶ Watch](walkthroughs/p08_single_number_ii.md) |
+| 09 | [Sum of Two Integers](p09_sum_of_two_integers.go) | Medium | XOR = sum, AND<<1 = carry, repeat | [▶ Watch](walkthroughs/p09_sum_of_two_integers.md) |
 
 ## Practice tip
 

@@ -127,17 +127,17 @@ out := sb.String()
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Valid Palindrome II](p01_valid_palindrome_ii.go) | Easy | Two pointers; at the mismatch try skipping either side |
-| 02 | [Find the Index of the First Occurrence](p02_find_first_occurrence.go) | Easy | Brute → KMP → Z-function → Rabin–Karp |
-| 03 | [Reverse Words in a String](p03_reverse_words.go) | Medium | `strings.Fields`; or squeeze + reverse all + reverse each word |
-| 04 | [String Compression](p04_string_compression.go) | Medium | Read/write pointers, in place |
-| 05 | [String to Integer (atoi)](p05_string_to_integer.go) | Medium | State machine + overflow check before multiply |
-| 06 | [Longest Palindromic Substring](p06_longest_palindromic_substring.go) | Medium | Expand around 2n−1 centers; Manacher for O(n) |
-| 07 | [Repeated DNA Sequences](p07_repeated_dna_sequences.go) | Medium | 2-bit rolling encoding = collision-free hash |
-| 08 | [Longest Happy Prefix](p08_longest_happy_prefix.go) | Hard | `pi[n-1]`; or prefix/suffix hashes in one pass |
-| 09 | [Minimum Window Substring](p09_minimum_window_substring.go) | Hard | Sliding window with need-counts and a `missing` counter |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Valid Palindrome II](p01_valid_palindrome_ii.go) | Easy | Two pointers; at the mismatch try skipping either side | [▶ Watch](walkthroughs/p01_valid_palindrome_ii.md) |
+| 02 | [Find the Index of the First Occurrence](p02_find_first_occurrence.go) | Easy | Brute → KMP → Z-function → Rabin–Karp | [▶ Watch](walkthroughs/p02_find_first_occurrence.md) |
+| 03 | [Reverse Words in a String](p03_reverse_words.go) | Medium | `strings.Fields`; or squeeze + reverse all + reverse each word | [▶ Watch](walkthroughs/p03_reverse_words.md) |
+| 04 | [String Compression](p04_string_compression.go) | Medium | Read/write pointers, in place | [▶ Watch](walkthroughs/p04_string_compression.md) |
+| 05 | [String to Integer (atoi)](p05_string_to_integer.go) | Medium | State machine + overflow check before multiply | [▶ Watch](walkthroughs/p05_string_to_integer.md) |
+| 06 | [Longest Palindromic Substring](p06_longest_palindromic_substring.go) | Medium | Expand around 2n−1 centers; Manacher for O(n) | [▶ Watch](walkthroughs/p06_longest_palindromic_substring.md) |
+| 07 | [Repeated DNA Sequences](p07_repeated_dna_sequences.go) | Medium | 2-bit rolling encoding = collision-free hash | [▶ Watch](walkthroughs/p07_repeated_dna_sequences.md) |
+| 08 | [Longest Happy Prefix](p08_longest_happy_prefix.go) | Hard | `pi[n-1]`; or prefix/suffix hashes in one pass | [▶ Watch](walkthroughs/p08_longest_happy_prefix.md) |
+| 09 | [Minimum Window Substring](p09_minimum_window_substring.go) | Hard | Sliding window with need-counts and a `missing` counter | [▶ Watch](walkthroughs/p09_minimum_window_substring.md) |
 
 ## Practice tip
 

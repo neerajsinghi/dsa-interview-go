@@ -137,15 +137,15 @@ smallest := heap.Pop(ih).(int)
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Last Stone Weight](p01_last_stone_weight.go) | Easy | Max-heap simulation |
-| 02 | [Kth Largest Element](p02_kth_largest.go) | Medium | Size-k min-heap; three-way quickselect |
-| 03 | [K Closest Points to Origin](p03_k_closest_points.go) | Medium | Size-k max-heap on squared distance |
-| 04 | [Top K Frequent Words](p04_top_k_frequent_words.go) | Medium | Count + size-k heap with reversed tie-break |
-| 05 | [Task Scheduler](p05_task_scheduler.go) | Medium | Max-heap + cooldown queue; closed-form frame count |
-| 06 | [Merge k Sorted Lists](p06_merge_k_sorted.go) | Hard | Min-heap of list heads; or pairwise merge |
-| 07 | [Find Median from Data Stream](p07_median_finder.go) | Hard | Two heaps, sizes balanced within one |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Last Stone Weight](p01_last_stone_weight.go) | Easy | Max-heap simulation | [▶ Watch](walkthroughs/p01_last_stone_weight.md) |
+| 02 | [Kth Largest Element](p02_kth_largest.go) | Medium | Size-k min-heap; three-way quickselect | [▶ Watch](walkthroughs/p02_kth_largest.md) |
+| 03 | [K Closest Points to Origin](p03_k_closest_points.go) | Medium | Size-k max-heap on squared distance | [▶ Watch](walkthroughs/p03_k_closest_points.md) |
+| 04 | [Top K Frequent Words](p04_top_k_frequent_words.go) | Medium | Count + size-k heap with reversed tie-break | [▶ Watch](walkthroughs/p04_top_k_frequent_words.md) |
+| 05 | [Task Scheduler](p05_task_scheduler.go) | Medium | Max-heap + cooldown queue; closed-form frame count | [▶ Watch](walkthroughs/p05_task_scheduler.md) |
+| 06 | [Merge k Sorted Lists](p06_merge_k_sorted.go) | Hard | Min-heap of list heads; or pairwise merge | [▶ Watch](walkthroughs/p06_merge_k_sorted.md) |
+| 07 | [Find Median from Data Stream](p07_median_finder.go) | Hard | Two heaps, sizes balanced within one | [▶ Watch](walkthroughs/p07_median_finder.md) |
 
 ## Practice tip
 

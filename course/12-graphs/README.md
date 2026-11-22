@@ -124,17 +124,17 @@ Full versions (iterative DFS, both topological sorts, union by rank) are in [gra
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Number of Islands](p01_number_of_islands.go) | Medium | Flood fill each new land cell; or union-find and count groups |
-| 02 | [Clone Graph](p02_clone_graph.go) | Medium | Map original → copy doubles as visited; register before recursing |
-| 03 | [Rotting Oranges](p03_rotting_oranges.go) | Medium | Multi-source BFS, one level per minute |
-| 04 | [Course Schedule I & II](p04_course_schedule.go) | Medium | Topological sort; cycle ⇔ impossible |
-| 05 | [Connected Components](p05_connected_components.go) | Medium | Union-find: each successful union removes a group |
-| 06 | [Redundant Connection](p06_redundant_connection.go) | Medium | First edge whose endpoints are already connected |
-| 07 | [Pacific Atlantic Water Flow](p07_pacific_atlantic.go) | Medium | Climb uphill from both coasts, intersect |
-| 08 | [Word Ladder](p08_word_ladder.go) | Hard | BFS on implicit word graph; bidirectional BFS |
-| 09 | [Alien Dictionary](p09_alien_dictionary.go) | Hard | Adjacent-word facts → graph → Kahn |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Number of Islands](p01_number_of_islands.go) | Medium | Flood fill each new land cell; or union-find and count groups | [▶ Watch](walkthroughs/p01_number_of_islands.md) |
+| 02 | [Clone Graph](p02_clone_graph.go) | Medium | Map original → copy doubles as visited; register before recursing | [▶ Watch](walkthroughs/p02_clone_graph.md) |
+| 03 | [Rotting Oranges](p03_rotting_oranges.go) | Medium | Multi-source BFS, one level per minute | [▶ Watch](walkthroughs/p03_rotting_oranges.md) |
+| 04 | [Course Schedule I & II](p04_course_schedule.go) | Medium | Topological sort; cycle ⇔ impossible | [▶ Watch](walkthroughs/p04_course_schedule.md) |
+| 05 | [Connected Components](p05_connected_components.go) | Medium | Union-find: each successful union removes a group | [▶ Watch](walkthroughs/p05_connected_components.md) |
+| 06 | [Redundant Connection](p06_redundant_connection.go) | Medium | First edge whose endpoints are already connected | [▶ Watch](walkthroughs/p06_redundant_connection.md) |
+| 07 | [Pacific Atlantic Water Flow](p07_pacific_atlantic.go) | Medium | Climb uphill from both coasts, intersect | [▶ Watch](walkthroughs/p07_pacific_atlantic.md) |
+| 08 | [Word Ladder](p08_word_ladder.go) | Hard | BFS on implicit word graph; bidirectional BFS | [▶ Watch](walkthroughs/p08_word_ladder.md) |
+| 09 | [Alien Dictionary](p09_alien_dictionary.go) | Hard | Adjacent-word facts → graph → Kahn | [▶ Watch](walkthroughs/p09_alien_dictionary.md) |
 
 ## Practice tip
 

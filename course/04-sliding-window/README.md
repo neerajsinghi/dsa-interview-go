@@ -128,16 +128,16 @@ for right := range nums {
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Maximum Sum Subarray of Size K](p01_max_sum_subarray_k.go) | Easy | Fixed window: add entering, subtract leaving |
-| 02 | [Best Time to Buy and Sell Stock](p02_best_time_stock.go) | Easy | Left edge = cheapest day so far |
-| 03 | [Minimum Size Subarray Sum](p03_min_size_subarray_sum.go) | Medium | Shrink while valid (positives only) |
-| 04 | [Longest Substring Without Repeating Characters](p04_longest_substring_no_repeat.go) | Medium | Jump `left` past last occurrence |
-| 05 | [Longest Repeating Character Replacement](p05_char_replacement.go) | Medium | `len − maxFreq ≤ k`; slide, never shrink |
-| 06 | [Permutation in String](p06_permutation_in_string.go) | Medium | Fixed window + count of matching letters |
-| 07 | [Minimum Window Substring](p07_min_window_substring.go) | Hard | Need counts + `missing`; expand then shrink |
-| 08 | [Sliding Window Maximum](p08_sliding_window_max.go) | Hard | Monotonic decreasing deque of indices |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Maximum Sum Subarray of Size K](p01_max_sum_subarray_k.go) | Easy | Fixed window: add entering, subtract leaving | [▶ Watch](walkthroughs/p01_max_sum_subarray_k.md) |
+| 02 | [Best Time to Buy and Sell Stock](p02_best_time_stock.go) | Easy | Left edge = cheapest day so far | [▶ Watch](walkthroughs/p02_best_time_stock.md) |
+| 03 | [Minimum Size Subarray Sum](p03_min_size_subarray_sum.go) | Medium | Shrink while valid (positives only) | [▶ Watch](walkthroughs/p03_min_size_subarray_sum.md) |
+| 04 | [Longest Substring Without Repeating Characters](p04_longest_substring_no_repeat.go) | Medium | Jump `left` past last occurrence | [▶ Watch](walkthroughs/p04_longest_substring_no_repeat.md) |
+| 05 | [Longest Repeating Character Replacement](p05_char_replacement.go) | Medium | `len − maxFreq ≤ k`; slide, never shrink | [▶ Watch](walkthroughs/p05_char_replacement.md) |
+| 06 | [Permutation in String](p06_permutation_in_string.go) | Medium | Fixed window + count of matching letters | [▶ Watch](walkthroughs/p06_permutation_in_string.md) |
+| 07 | [Minimum Window Substring](p07_min_window_substring.go) | Hard | Need counts + `missing`; expand then shrink | [▶ Watch](walkthroughs/p07_min_window_substring.md) |
+| 08 | [Sliding Window Maximum](p08_sliding_window_max.go) | Hard | Monotonic decreasing deque of indices | [▶ Watch](walkthroughs/p08_sliding_window_max.md) |
 
 ## Practice tip
 

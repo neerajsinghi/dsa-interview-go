@@ -124,16 +124,16 @@ The `O(n)` factor is the cost of copying each answer. Space is `O(n)` recursion 
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Letter Combinations of a Phone Number](p01_letter_combinations.go) | Medium | One decision per digit; iterative product as an alternative |
-| 02 | [Subsets I & II](p02_subsets.go) | Medium | Record at every node; sort + skip equal siblings for duplicates |
-| 03 | [Permutations I & II](p03_permutations.go) | Medium | used[] array or in-place swaps; `!used[i-1]` rule for duplicates |
-| 04 | [Combination Sum](p04_combination_sum.go) | Medium | Recurse with `i` to allow reuse; sorted `break` prune |
-| 05 | [Palindrome Partitioning](p05_palindrome_partitioning.go) | Medium | Cut positions + precomputed `isPal` table |
-| 06 | [Word Search](p06_word_search.go) | Medium | Grid DFS, mark/restore cell; letter-count and reverse-word pruning |
-| 07 | [N-Queens I & II](p07_n_queens.go) | Hard | One queen per row; column / `r-c` / `r+c` sets; bitmask counting |
-| 08 | [Sudoku Solver](p08_sudoku_solver.go) | Hard | Bitmask candidates + fill the most constrained cell first |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Letter Combinations of a Phone Number](p01_letter_combinations.go) | Medium | One decision per digit; iterative product as an alternative | [▶ Watch](walkthroughs/p01_letter_combinations.md) |
+| 02 | [Subsets I & II](p02_subsets.go) | Medium | Record at every node; sort + skip equal siblings for duplicates | [▶ Watch](walkthroughs/p02_subsets.md) |
+| 03 | [Permutations I & II](p03_permutations.go) | Medium | used[] array or in-place swaps; `!used[i-1]` rule for duplicates | [▶ Watch](walkthroughs/p03_permutations.md) |
+| 04 | [Combination Sum](p04_combination_sum.go) | Medium | Recurse with `i` to allow reuse; sorted `break` prune | [▶ Watch](walkthroughs/p04_combination_sum.md) |
+| 05 | [Palindrome Partitioning](p05_palindrome_partitioning.go) | Medium | Cut positions + precomputed `isPal` table | [▶ Watch](walkthroughs/p05_palindrome_partitioning.md) |
+| 06 | [Word Search](p06_word_search.go) | Medium | Grid DFS, mark/restore cell; letter-count and reverse-word pruning | [▶ Watch](walkthroughs/p06_word_search.md) |
+| 07 | [N-Queens I & II](p07_n_queens.go) | Hard | One queen per row; column / `r-c` / `r+c` sets; bitmask counting | [▶ Watch](walkthroughs/p07_n_queens.md) |
+| 08 | [Sudoku Solver](p08_sudoku_solver.go) | Hard | Bitmask candidates + fill the most constrained cell first | [▶ Watch](walkthroughs/p08_sudoku_solver.md) |
 
 ## Practice tip
 
