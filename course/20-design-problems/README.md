@@ -121,17 +121,17 @@ func (c *Cache[K, V]) Get(k K) (V, bool) {
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Min Stack / Max Stack](p01_min_max_stack.go) | Medium | Store `(value, running min/max)` per frame |
-| 02 | [Design Hit Counter](p02_hit_counter.go) | Medium | 300-bucket ring keyed by `ts % 300` · concurrency-safe |
-| 03 | [Peeking Iterator & Flatten Nested List](p03_iterators.go) | Medium | One-element lookahead; explicit frame stack; `iter.Seq` |
-| 04 | [Time-Based Key-Value Store](p04_time_map.go) | Medium | Per-key sorted history + floor binary search · RWMutex |
-| 05 | [Snapshot Array](p05_snapshot_array.go) | Medium | Copy-on-write history per index |
-| 06 | [LRU Cache](p06_lru_cache.go) | Medium | Map + doubly linked list · concurrency-safe |
-| 07 | [LFU Cache](p07_lfu_cache.go) | Hard | Freq → LRU list, plus `minFreq` · concurrency-safe |
-| 08 | [Rate Limiter (token bucket)](p08_rate_limiter.go) | Medium | Lazy refill, injected clock, one mutex · `-race` test |
-| 09 | [Design Twitter](p09_design_twitter.go) | Medium | Heap merge of per-user timelines (fan-out on read) |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Min Stack / Max Stack](p01_min_max_stack.go) | Medium | Store `(value, running min/max)` per frame | [▶ Watch](walkthroughs/p01_min_max_stack.md) |
+| 02 | [Design Hit Counter](p02_hit_counter.go) | Medium | 300-bucket ring keyed by `ts % 300` · concurrency-safe | [▶ Watch](walkthroughs/p02_hit_counter.md) |
+| 03 | [Peeking Iterator & Flatten Nested List](p03_iterators.go) | Medium | One-element lookahead; explicit frame stack; `iter.Seq` | [▶ Watch](walkthroughs/p03_iterators.md) |
+| 04 | [Time-Based Key-Value Store](p04_time_map.go) | Medium | Per-key sorted history + floor binary search · RWMutex | [▶ Watch](walkthroughs/p04_time_map.md) |
+| 05 | [Snapshot Array](p05_snapshot_array.go) | Medium | Copy-on-write history per index | [▶ Watch](walkthroughs/p05_snapshot_array.md) |
+| 06 | [LRU Cache](p06_lru_cache.go) | Medium | Map + doubly linked list · concurrency-safe | [▶ Watch](walkthroughs/p06_lru_cache.md) |
+| 07 | [LFU Cache](p07_lfu_cache.go) | Hard | Freq → LRU list, plus `minFreq` · concurrency-safe | [▶ Watch](walkthroughs/p07_lfu_cache.md) |
+| 08 | [Rate Limiter (token bucket)](p08_rate_limiter.go) | Medium | Lazy refill, injected clock, one mutex · `-race` test | [▶ Watch](walkthroughs/p08_rate_limiter.md) |
+| 09 | [Design Twitter](p09_design_twitter.go) | Medium | Heap merge of per-user timelines (fan-out on read) | [▶ Watch](walkthroughs/p09_design_twitter.md) |
 
 ### Related production patterns
 

@@ -117,16 +117,16 @@ pointers ([03](../03-two-pointers/README.md)).
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Contains Duplicate](p01_contains_duplicate.go) | Easy | Set membership; stop at first repeat |
-| 02 | [Valid Anagram](p02_valid_anagram.go) | Easy | Equal `[26]int` letter counts |
-| 03 | [Two Sum](p03_two_sum.go) | Easy | Map value → index; look up complement |
-| 04 | [Group Anagrams](p04_group_anagrams.go) | Medium | Canonical key → group; arrays as map keys |
-| 05 | [Top K Frequent Elements](p05_top_k_frequent.go) | Medium | Count, then bucket sort by frequency |
-| 06 | [Product of Array Except Self](p06_product_except_self.go) | Medium | Prefix product × suffix product, no division |
-| 07 | [Encode and Decode Strings](p07_encode_decode.go) | Medium | Length-prefix framing |
-| 08 | [Longest Consecutive Sequence](p08_longest_consecutive.go) | Medium | Set; only count from run starts |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Contains Duplicate](p01_contains_duplicate.go) | Easy | Set membership; stop at first repeat | [▶ Watch](walkthroughs/p01_contains_duplicate.md) |
+| 02 | [Valid Anagram](p02_valid_anagram.go) | Easy | Equal `[26]int` letter counts | [▶ Watch](walkthroughs/p02_valid_anagram.md) |
+| 03 | [Two Sum](p03_two_sum.go) | Easy | Map value → index; look up complement | [▶ Watch](walkthroughs/p03_two_sum.md) |
+| 04 | [Group Anagrams](p04_group_anagrams.go) | Medium | Canonical key → group; arrays as map keys | [▶ Watch](walkthroughs/p04_group_anagrams.md) |
+| 05 | [Top K Frequent Elements](p05_top_k_frequent.go) | Medium | Count, then bucket sort by frequency | [▶ Watch](walkthroughs/p05_top_k_frequent.md) |
+| 06 | [Product of Array Except Self](p06_product_except_self.go) | Medium | Prefix product × suffix product, no division | [▶ Watch](walkthroughs/p06_product_except_self.md) |
+| 07 | [Encode and Decode Strings](p07_encode_decode.go) | Medium | Length-prefix framing | [▶ Watch](walkthroughs/p07_encode_decode.md) |
+| 08 | [Longest Consecutive Sequence](p08_longest_consecutive.go) | Medium | Set; only count from run starts | [▶ Watch](walkthroughs/p08_longest_consecutive.md) |
 
 ## Practice tip
 

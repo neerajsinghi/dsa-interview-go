@@ -112,15 +112,15 @@ The full version with `Delete`, `CountPrefix` and `WithPrefix` is in [trie.go](t
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Implement Trie](p01_implement_trie.go) | Medium | Array-backed `Trie` + Unicode `MapTrie`; `IsEnd` separates word from prefix |
-| 02 | [Longest Common Prefix](p02_longest_common_prefix.go) | Easy | Vertical scan, or walk the trie's single-child trunk |
-| 03 | [Add and Search Words](p03_add_search_words.go) | Medium | `.` branches into every child (trie + DFS) |
-| 04 | [Replace Words](p04_replace_words.go) | Medium | First `IsEnd` on the walk = shortest root |
-| 05 | [Search Suggestions System](p05_search_suggestions.go) | Medium | Sorted DFS from the prefix node, stop at 3; or sort + binary search |
-| 06 | [Maximum XOR of Two Numbers](p06_maximum_xor.go) | Medium | Bitwise trie, greedily take the opposite bit |
-| 07 | [Word Search II](p07_word_search_ii.go) | Hard | One grid DFS for all words, walking the trie; prune found leaves |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Implement Trie](p01_implement_trie.go) | Medium | Array-backed `Trie` + Unicode `MapTrie`; `IsEnd` separates word from prefix | [▶ Watch](walkthroughs/p01_implement_trie.md) |
+| 02 | [Longest Common Prefix](p02_longest_common_prefix.go) | Easy | Vertical scan, or walk the trie's single-child trunk | [▶ Watch](walkthroughs/p02_longest_common_prefix.md) |
+| 03 | [Add and Search Words](p03_add_search_words.go) | Medium | `.` branches into every child (trie + DFS) | [▶ Watch](walkthroughs/p03_add_search_words.md) |
+| 04 | [Replace Words](p04_replace_words.go) | Medium | First `IsEnd` on the walk = shortest root | [▶ Watch](walkthroughs/p04_replace_words.md) |
+| 05 | [Search Suggestions System](p05_search_suggestions.go) | Medium | Sorted DFS from the prefix node, stop at 3; or sort + binary search | [▶ Watch](walkthroughs/p05_search_suggestions.md) |
+| 06 | [Maximum XOR of Two Numbers](p06_maximum_xor.go) | Medium | Bitwise trie, greedily take the opposite bit | [▶ Watch](walkthroughs/p06_maximum_xor.md) |
+| 07 | [Word Search II](p07_word_search_ii.go) | Hard | One grid DFS for all words, walking the trie; prune found leaves | [▶ Watch](walkthroughs/p07_word_search_ii.md) |
 
 ## Practice tip
 

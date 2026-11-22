@@ -133,15 +133,15 @@ All six algorithms live in [shortestpaths.go](shortestpaths.go), with a test tha
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Network Delay Time](p01_network_delay_time.go) | Medium | Dijkstra; answer = max distance |
-| 02 | [Find the City (threshold distance)](p02_find_the_city.go) | Medium | Floyd-Warshall all-pairs, then count |
-| 03 | [Min Cost to Connect All Points](p03_min_cost_connect_points.go) | Medium | MST on a complete graph: `O(n²)` Prim |
-| 04 | [Path With Minimum Effort](p04_path_with_minimum_effort.go) | Medium | Dijkstra with `max`; or binary search + BFS |
-| 05 | [Cheapest Flights Within K Stops](p05_cheapest_flights_k_stops.go) | Medium | k+1 rounds of snapshot Bellman-Ford |
-| 06 | [Minimum Obstacle Removal](p06_minimum_obstacle_removal.go) | Hard | 0-1 BFS with a deque |
-| 07 | [Swim in Rising Water](p07_swim_in_rising_water.go) | Hard | Bottleneck path: minimax Dijkstra or union-find by elevation |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Network Delay Time](p01_network_delay_time.go) | Medium | Dijkstra; answer = max distance | [▶ Watch](walkthroughs/p01_network_delay_time.md) |
+| 02 | [Find the City (threshold distance)](p02_find_the_city.go) | Medium | Floyd-Warshall all-pairs, then count | [▶ Watch](walkthroughs/p02_find_the_city.md) |
+| 03 | [Min Cost to Connect All Points](p03_min_cost_connect_points.go) | Medium | MST on a complete graph: `O(n²)` Prim | [▶ Watch](walkthroughs/p03_min_cost_connect_points.md) |
+| 04 | [Path With Minimum Effort](p04_path_with_minimum_effort.go) | Medium | Dijkstra with `max`; or binary search + BFS | [▶ Watch](walkthroughs/p04_path_with_minimum_effort.md) |
+| 05 | [Cheapest Flights Within K Stops](p05_cheapest_flights_k_stops.go) | Medium | k+1 rounds of snapshot Bellman-Ford | [▶ Watch](walkthroughs/p05_cheapest_flights_k_stops.md) |
+| 06 | [Minimum Obstacle Removal](p06_minimum_obstacle_removal.go) | Hard | 0-1 BFS with a deque | [▶ Watch](walkthroughs/p06_minimum_obstacle_removal.md) |
+| 07 | [Swim in Rising Water](p07_swim_in_rising_water.go) | Hard | Bottleneck path: minimax Dijkstra or union-find by elevation | [▶ Watch](walkthroughs/p07_swim_in_rising_water.md) |
 
 ## Practice tip
 

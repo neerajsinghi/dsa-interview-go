@@ -118,17 +118,17 @@ for i, w := range weights {
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Unique Paths (with obstacles)](p01_unique_paths.go) | Medium | `ways = up + left`, 0 on obstacles; one rolling row |
-| 02 | [Minimum Path Sum](p02_min_path_sum.go) | Medium | Grid DP with `min`; first row/col have one parent |
-| 03 | [Longest Common Subsequence](p03_longest_common_subsequence.go) | Medium | Match → diag+1, else max(up, left); backtrack to rebuild |
-| 04 | [Edit Distance](p04_edit_distance.go) | Medium | Insert/delete/replace = left/up/diag; save diag when rolling |
-| 05 | [0/1 Knapsack](p05_knapsack.go) | Medium | Take-or-skip; 1-D array with capacity descending |
-| 06 | [Longest Palindromic Subsequence](p06_longest_palindromic_subsequence.go) | Medium | Interval DP: ends match → inner + 2 |
-| 07 | [Interleaving String](p07_interleaving_string.go) | Medium | `dp[i][j]`: last char came from s1 or s2 |
-| 08 | [Regular Expression Matching](p08_regex_matching.go) | Hard | `x*` → skip it (j+2) or consume one char (i+1) |
-| 09 | [Burst Balloons](p09_burst_balloons.go) | Hard | Interval DP choosing the **last** balloon in `(l, r)` |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Unique Paths (with obstacles)](p01_unique_paths.go) | Medium | `ways = up + left`, 0 on obstacles; one rolling row | [▶ Watch](walkthroughs/p01_unique_paths.md) |
+| 02 | [Minimum Path Sum](p02_min_path_sum.go) | Medium | Grid DP with `min`; first row/col have one parent | [▶ Watch](walkthroughs/p02_min_path_sum.md) |
+| 03 | [Longest Common Subsequence](p03_longest_common_subsequence.go) | Medium | Match → diag+1, else max(up, left); backtrack to rebuild | [▶ Watch](walkthroughs/p03_longest_common_subsequence.md) |
+| 04 | [Edit Distance](p04_edit_distance.go) | Medium | Insert/delete/replace = left/up/diag; save diag when rolling | [▶ Watch](walkthroughs/p04_edit_distance.md) |
+| 05 | [0/1 Knapsack](p05_knapsack.go) | Medium | Take-or-skip; 1-D array with capacity descending | [▶ Watch](walkthroughs/p05_knapsack.md) |
+| 06 | [Longest Palindromic Subsequence](p06_longest_palindromic_subsequence.go) | Medium | Interval DP: ends match → inner + 2 | [▶ Watch](walkthroughs/p06_longest_palindromic_subsequence.md) |
+| 07 | [Interleaving String](p07_interleaving_string.go) | Medium | `dp[i][j]`: last char came from s1 or s2 | [▶ Watch](walkthroughs/p07_interleaving_string.md) |
+| 08 | [Regular Expression Matching](p08_regex_matching.go) | Hard | `x*` → skip it (j+2) or consume one char (i+1) | [▶ Watch](walkthroughs/p08_regex_matching.md) |
+| 09 | [Burst Balloons](p09_burst_balloons.go) | Hard | Interval DP choosing the **last** balloon in `(l, r)` | [▶ Watch](walkthroughs/p09_burst_balloons.md) |
 
 ## Practice tip
 

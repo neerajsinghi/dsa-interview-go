@@ -145,17 +145,17 @@ Always say "O(h), which is O(n) worst case" for recursion space.
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Maximum Depth](p01_max_depth.go) | Easy | 1 + max(left, right); BFS counts levels |
-| 02 | [Invert Binary Tree](p02_invert_tree.go) | Easy | Swap children at every node |
-| 03 | [Diameter of Binary Tree](p03_diameter.go) | Easy | Return height, record left + right |
-| 04 | [Validate BST](p04_validate_bst.go) | Medium | Pass (lo, hi) bounds down; or strictly increasing inorder |
-| 05 | [Lowest Common Ancestor (BST + general)](p05_lowest_common_ancestor.go) | Medium | BST: split point. General: both sides non-nil |
-| 06 | [Right Side View](p06_right_side_view.go) | Medium | Last node per BFS level; or right-first DFS |
-| 07 | [Construct from Preorder + Inorder](p07_build_tree.go) | Medium | Root from preorder splits inorder; index map |
-| 08 | [Serialize and Deserialize](p08_serialize.go) | Hard | Preorder with `#` null markers |
-| 09 | [Maximum Path Sum](p09_max_path_sum.go) | Hard | Return best one-sided gain, record the turning path |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Maximum Depth](p01_max_depth.go) | Easy | 1 + max(left, right); BFS counts levels | [▶ Watch](walkthroughs/p01_max_depth.md) |
+| 02 | [Invert Binary Tree](p02_invert_tree.go) | Easy | Swap children at every node | [▶ Watch](walkthroughs/p02_invert_tree.md) |
+| 03 | [Diameter of Binary Tree](p03_diameter.go) | Easy | Return height, record left + right | [▶ Watch](walkthroughs/p03_diameter.md) |
+| 04 | [Validate BST](p04_validate_bst.go) | Medium | Pass (lo, hi) bounds down; or strictly increasing inorder | [▶ Watch](walkthroughs/p04_validate_bst.md) |
+| 05 | [Lowest Common Ancestor (BST + general)](p05_lowest_common_ancestor.go) | Medium | BST: split point. General: both sides non-nil | [▶ Watch](walkthroughs/p05_lowest_common_ancestor.md) |
+| 06 | [Right Side View](p06_right_side_view.go) | Medium | Last node per BFS level; or right-first DFS | [▶ Watch](walkthroughs/p06_right_side_view.md) |
+| 07 | [Construct from Preorder + Inorder](p07_build_tree.go) | Medium | Root from preorder splits inorder; index map | [▶ Watch](walkthroughs/p07_build_tree.md) |
+| 08 | [Serialize and Deserialize](p08_serialize.go) | Hard | Preorder with `#` null markers | [▶ Watch](walkthroughs/p08_serialize.md) |
+| 09 | [Maximum Path Sum](p09_max_path_sum.go) | Hard | Return best one-sided gain, record the turning path | [▶ Watch](walkthroughs/p09_max_path_sum.md) |
 
 The traversals themselves, with tests, are in [trees.go](trees.go), and
 `Equal` is LeetCode's *Same Tree*.

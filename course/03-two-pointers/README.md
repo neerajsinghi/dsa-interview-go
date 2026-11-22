@@ -110,15 +110,15 @@ nums = nums[:w]
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Valid Palindrome](p01_valid_palindrome.go) | Easy | Opposite ends, skip non-alphanumerics |
-| 02 | [Remove Duplicates from Sorted Array](p02_remove_duplicates.go) | Easy | Read/write pointers compact in place |
-| 03 | [Two Sum II (sorted)](p03_two_sum_sorted.go) | Medium | Too small → `l++`, too big → `r--` |
-| 04 | [Sort Colors](p04_sort_colors.go) | Medium | Dutch flag: low / mid / high regions |
-| 05 | [3Sum](p05_three_sum.go) | Medium | Sort, fix one, two-pointer the rest; skip dups |
-| 06 | [Container With Most Water](p06_container_most_water.go) | Medium | Move the shorter wall — it can't do better |
-| 07 | [Trapping Rain Water](p07_trapping_rain_water.go) | Hard | Smaller running max decides; settle that side |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Valid Palindrome](p01_valid_palindrome.go) | Easy | Opposite ends, skip non-alphanumerics | [▶ Watch](walkthroughs/p01_valid_palindrome.md) |
+| 02 | [Remove Duplicates from Sorted Array](p02_remove_duplicates.go) | Easy | Read/write pointers compact in place | [▶ Watch](walkthroughs/p02_remove_duplicates.md) |
+| 03 | [Two Sum II (sorted)](p03_two_sum_sorted.go) | Medium | Too small → `l++`, too big → `r--` | [▶ Watch](walkthroughs/p03_two_sum_sorted.md) |
+| 04 | [Sort Colors](p04_sort_colors.go) | Medium | Dutch flag: low / mid / high regions | [▶ Watch](walkthroughs/p04_sort_colors.md) |
+| 05 | [3Sum](p05_three_sum.go) | Medium | Sort, fix one, two-pointer the rest; skip dups | [▶ Watch](walkthroughs/p05_three_sum.md) |
+| 06 | [Container With Most Water](p06_container_most_water.go) | Medium | Move the shorter wall — it can't do better | [▶ Watch](walkthroughs/p06_container_most_water.md) |
+| 07 | [Trapping Rain Water](p07_trapping_rain_water.go) | Hard | Smaller running max decides; settle that side | [▶ Watch](walkthroughs/p07_trapping_rain_water.md) |
 
 ## Practice tip
 

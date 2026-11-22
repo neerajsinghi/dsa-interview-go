@@ -184,13 +184,13 @@ Two lessons hidden in those numbers:
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Linear vs Binary Search](p01_search.go) | Easy | Sorted input lets you discard half each step: O(log n) |
-| 02 | [Contains Duplicate, three ways](p02_duplicates.go) | Easy | O(n²) pairs → O(n log n) sort → O(n) hash set |
-| 03 | [Fibonacci: naive vs memo vs iterative](p03_fibonacci.go) | Easy | Recursion tree; memoization collapses it to a path |
-| 04 | [Amortized Append](p04_append_growth.go) | Easy | Geometric growth ⇒ O(1) amortized; prepend is O(n²) |
-| 05 | [Space Complexity of Recursion](p05_recursion_space.go) | Easy | Stack depth n vs log n vs 1 |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Linear vs Binary Search](p01_search.go) | Easy | Sorted input lets you discard half each step: O(log n) | [▶ Watch](walkthroughs/p01_search.md) |
+| 02 | [Contains Duplicate, three ways](p02_duplicates.go) | Easy | O(n²) pairs → O(n log n) sort → O(n) hash set | [▶ Watch](walkthroughs/p02_duplicates.md) |
+| 03 | [Fibonacci: naive vs memo vs iterative](p03_fibonacci.go) | Easy | Recursion tree; memoization collapses it to a path | [▶ Watch](walkthroughs/p03_fibonacci.md) |
+| 04 | [Amortized Append](p04_append_growth.go) | Easy | Geometric growth ⇒ O(1) amortized; prepend is O(n²) | [▶ Watch](walkthroughs/p04_append_growth.md) |
+| 05 | [Space Complexity of Recursion](p05_recursion_space.go) | Easy | Stack depth n vs log n vs 1 | [▶ Watch](walkthroughs/p05_recursion_space.md) |
 
 ## Practice tip
 

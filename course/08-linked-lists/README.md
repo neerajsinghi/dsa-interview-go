@@ -128,16 +128,16 @@ for fast.Next != nil && fast.Next.Next != nil {
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Reverse Linked List](p01_reverse_list.go) | Easy | prev/cur/next rewiring; recursive variant |
-| 02 | [Merge Two Sorted Lists](p02_merge_two_sorted.go) | Easy | Dummy head + tail pointer |
-| 03 | [Linked List Cycle I & II](p03_linked_list_cycle.go) | Medium | Floyd; reset to head to find the start |
-| 04 | [Remove Nth Node From End](p04_remove_nth_from_end.go) | Medium | Gap of n+1 from a dummy head |
-| 05 | [Reorder List](p05_reorder_list.go) | Medium | Middle + reverse second half + weave |
-| 06 | [Add Two Numbers](p06_add_two_numbers.go) | Medium | Digit-by-digit with carry; loop while carry |
-| 07 | [Copy List with Random Pointer](p07_copy_random_list.go) | Medium | Old→new map, or interleave clones for O(1) |
-| 08 | [Reverse Nodes in k-Group](p08_reverse_k_group.go) | Hard | Check k nodes exist, reverse between anchors |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Reverse Linked List](p01_reverse_list.go) | Easy | prev/cur/next rewiring; recursive variant | [▶ Watch](walkthroughs/p01_reverse_list.md) |
+| 02 | [Merge Two Sorted Lists](p02_merge_two_sorted.go) | Easy | Dummy head + tail pointer | [▶ Watch](walkthroughs/p02_merge_two_sorted.md) |
+| 03 | [Linked List Cycle I & II](p03_linked_list_cycle.go) | Medium | Floyd; reset to head to find the start | [▶ Watch](walkthroughs/p03_linked_list_cycle.md) |
+| 04 | [Remove Nth Node From End](p04_remove_nth_from_end.go) | Medium | Gap of n+1 from a dummy head | [▶ Watch](walkthroughs/p04_remove_nth_from_end.md) |
+| 05 | [Reorder List](p05_reorder_list.go) | Medium | Middle + reverse second half + weave | [▶ Watch](walkthroughs/p05_reorder_list.md) |
+| 06 | [Add Two Numbers](p06_add_two_numbers.go) | Medium | Digit-by-digit with carry; loop while carry | [▶ Watch](walkthroughs/p06_add_two_numbers.md) |
+| 07 | [Copy List with Random Pointer](p07_copy_random_list.go) | Medium | Old→new map, or interleave clones for O(1) | [▶ Watch](walkthroughs/p07_copy_random_list.md) |
+| 08 | [Reverse Nodes in k-Group](p08_reverse_k_group.go) | Hard | Check k nodes exist, reverse between anchors | [▶ Watch](walkthroughs/p08_reverse_k_group.md) |
 
 ## Practice tip
 

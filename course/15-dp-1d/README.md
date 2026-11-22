@@ -138,17 +138,17 @@ DP time = **(number of states) × (work per transition)**; space = number of sta
 
 ## Problems
 
-| # | Problem | Difficulty | Key idea |
-|---|---|---|---|
-| 01 | [Climbing Stairs](p01_climbing_stairs.go) | Easy | Split by last move → Fibonacci |
-| 02 | [Min Cost Climbing Stairs](p02_min_cost_climbing_stairs.go) | Easy | `min` over the last move; top is index `n` |
-| 03 | [House Robber I & II](p03_house_robber.go) | Medium | Take-or-skip; circle = best of two lines |
-| 04 | [Decode Ways](p04_decode_ways.go) | Medium | Stairs with validity checks on 1- and 2-digit pieces |
-| 05 | [Coin Change I & II](p05_coin_change.go) | Medium | Unbounded knapsack; coins-outer counts combinations |
-| 06 | [Word Break](p06_word_break.go) | Medium | Prefix DP: `ok[i] = ok[j] && s[j:i] ∈ dict` |
-| 07 | [Maximum Product Subarray](p07_max_product_subarray.go) | Medium | Kadane with both max and min (negatives flip) |
-| 08 | [Longest Increasing Subsequence](p08_longest_increasing_subsequence.go) | Medium | Ends-at-i `O(n²)`; patience sorting `O(n log n)` |
-| 09 | [Partition Equal Subset Sum](p09_partition_equal_subset_sum.go) | Medium | 0/1 knapsack to `total/2`, iterate sums downward |
+| # | Problem | Difficulty | Key idea | Walkthrough |
+|---|---|---|---|---|
+| 01 | [Climbing Stairs](p01_climbing_stairs.go) | Easy | Split by last move → Fibonacci | [▶ Watch](walkthroughs/p01_climbing_stairs.md) |
+| 02 | [Min Cost Climbing Stairs](p02_min_cost_climbing_stairs.go) | Easy | `min` over the last move; top is index `n` | [▶ Watch](walkthroughs/p02_min_cost_climbing_stairs.md) |
+| 03 | [House Robber I & II](p03_house_robber.go) | Medium | Take-or-skip; circle = best of two lines | [▶ Watch](walkthroughs/p03_house_robber.md) |
+| 04 | [Decode Ways](p04_decode_ways.go) | Medium | Stairs with validity checks on 1- and 2-digit pieces | [▶ Watch](walkthroughs/p04_decode_ways.md) |
+| 05 | [Coin Change I & II](p05_coin_change.go) | Medium | Unbounded knapsack; coins-outer counts combinations | [▶ Watch](walkthroughs/p05_coin_change.md) |
+| 06 | [Word Break](p06_word_break.go) | Medium | Prefix DP: `ok[i] = ok[j] && s[j:i] ∈ dict` | [▶ Watch](walkthroughs/p06_word_break.md) |
+| 07 | [Maximum Product Subarray](p07_max_product_subarray.go) | Medium | Kadane with both max and min (negatives flip) | [▶ Watch](walkthroughs/p07_max_product_subarray.md) |
+| 08 | [Longest Increasing Subsequence](p08_longest_increasing_subsequence.go) | Medium | Ends-at-i `O(n²)`; patience sorting `O(n log n)` | [▶ Watch](walkthroughs/p08_longest_increasing_subsequence.md) |
+| 09 | [Partition Equal Subset Sum](p09_partition_equal_subset_sum.go) | Medium | 0/1 knapsack to `total/2`, iterate sums downward | [▶ Watch](walkthroughs/p09_partition_equal_subset_sum.md) |
 
 ## Practice tip
 
